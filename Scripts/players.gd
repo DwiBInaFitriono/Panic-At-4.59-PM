@@ -1,0 +1,53 @@
+extends CharacterBody2D
+
+
+const WALK_SPEED := 100.0
+const RUN_SPEED := 180.0
+const ACCELERATION := 1200.0
+const FRICTION := 1000.0
+
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+
+var last_dir: Vector2 = Vector2.DOWN
+
+
+func _physics_process(delta: float) -> void:
+	# Auto: WASD langsung digabung jadi satu vektor, sudah dinormalisasi
+	# otomatis (diagonal tidak lebih cepat) — tanpa nilai yang di-set manual.   
+	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
+	var is_running := Input.is_action_pressed("sprint")
+	var target_speed := RUN_SPEED if is_running else WALK_SPEED
+
+	if direction != Vector2.ZERO:
+		velocity = velocity.move_toward(direction * target_speed, ACCELERATION * delta)
+		last_dir = direction
+		_play_animation("Walk" if not is_running else "Run", direction)
+	else:
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		_play_animation("Idle", last_dir)
+
+	move_and_slide()
+
+
+func _play_animation(state: String, dir: Vector2) -> void:
+	var anim_name := state + _get_direction_suffix(dir)
+
+	# Safety: cuma play kalau animasinya memang ada.
+	if anim.sprite_frames.has_animation(anim_name) and anim.animation != anim_name:
+		anim.play(anim_name)
+
+
+func _get_direction_suffix(dir: Vector2) -> String:
+	# Auto: ambil tanda (sign) tiap komponen vektor, bukan angka batas yang di-set.
+	var suffix := ""
+	if dir.y < 0.0:
+		suffix += "_up"
+	elif dir.y > 0.0:
+		suffix += "_down"
+	if dir.x < 0.0:
+		suffix += "_L"
+	elif dir.x > 0.0:
+		suffix += "_R"
+
+	return suffix if suffix != "" else "_down"
