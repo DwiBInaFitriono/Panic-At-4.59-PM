@@ -6,6 +6,528 @@
 [ext_resource type="Texture2D" uid="uid://voj3sx5ih8nj" path="res://Assets/Doors Windows Stairs LRK.png" id="4_ii5kg"]
 [ext_resource type="Texture2D" uid="uid://kw0midct6st8" path="res://Assets/Professional Kitchen Room Door Tiles.png" id="5_u0uho"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ios0t"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6fhyq"]
+sources/0 = SubResource("TileSetAtlasSource_ios0t")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcfqe"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jq8tk"]
+sources/0 = SubResource("TileSetAtlasSource_mcfqe")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjcck"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dwbtc"]
+sources/0 = SubResource("TileSetAtlasSource_vjcck")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vawdp"]
 texture = ExtResource("2_go5ld")
 0:0/0 = 0
@@ -83,6 +605,970 @@ texture = ExtResource("2_go5ld")
 
 [sub_resource type="TileSet" id="TileSet_bhunq"]
 sources/0 = SubResource("TileSetAtlasSource_vawdp")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ii5kg"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0uho"]
+texture = ExtResource("4_ii5kg")
+27:0/0 = 0
+28:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+27:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+34:1/0 = 0
+37:1/0 = 0
+38:1/0 = 0
+39:1/0 = 0
+41:1/0 = 0
+42:1/0 = 0
+43:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:2/0 = 0
+36:2/0 = 0
+37:2/0 = 0
+38:2/0 = 0
+39:2/0 = 0
+41:2/0 = 0
+42:2/0 = 0
+43:2/0 = 0
+44:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+31:3/0 = 0
+32:3/0 = 0
+33:3/0 = 0
+34:3/0 = 0
+36:3/0 = 0
+37:3/0 = 0
+38:3/0 = 0
+39:3/0 = 0
+41:3/0 = 0
+42:3/0 = 0
+43:3/0 = 0
+44:3/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+31:4/0 = 0
+32:4/0 = 0
+33:4/0 = 0
+34:4/0 = 0
+36:4/0 = 0
+37:4/0 = 0
+38:4/0 = 0
+39:4/0 = 0
+41:4/0 = 0
+42:4/0 = 0
+43:4/0 = 0
+44:4/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+38:5/0 = 0
+39:5/0 = 0
+41:5/0 = 0
+42:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+27:6/0 = 0
+28:6/0 = 0
+29:6/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+34:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
+39:6/0 = 0
+41:6/0 = 0
+42:6/0 = 0
+43:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+27:7/0 = 0
+28:7/0 = 0
+29:7/0 = 0
+30:7/0 = 0
+31:7/0 = 0
+32:7/0 = 0
+33:7/0 = 0
+34:7/0 = 0
+36:7/0 = 0
+37:7/0 = 0
+38:7/0 = 0
+39:7/0 = 0
+41:7/0 = 0
+42:7/0 = 0
+43:7/0 = 0
+44:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+30:8/0 = 0
+31:8/0 = 0
+32:8/0 = 0
+33:8/0 = 0
+34:8/0 = 0
+36:8/0 = 0
+37:8/0 = 0
+38:8/0 = 0
+39:8/0 = 0
+41:8/0 = 0
+42:8/0 = 0
+43:8/0 = 0
+44:8/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+27:9/0 = 0
+28:9/0 = 0
+29:9/0 = 0
+30:9/0 = 0
+31:9/0 = 0
+32:9/0 = 0
+33:9/0 = 0
+34:9/0 = 0
+36:9/0 = 0
+37:9/0 = 0
+38:9/0 = 0
+39:9/0 = 0
+41:9/0 = 0
+42:9/0 = 0
+43:9/0 = 0
+44:9/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+27:10/0 = 0
+28:10/0 = 0
+33:10/0 = 0
+34:10/0 = 0
+38:10/0 = 0
+39:10/0 = 0
+41:10/0 = 0
+42:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+24:11/0 = 0
+25:11/0 = 0
+27:11/0 = 0
+28:11/0 = 0
+29:11/0 = 0
+32:11/0 = 0
+33:11/0 = 0
+34:11/0 = 0
+37:11/0 = 0
+38:11/0 = 0
+39:11/0 = 0
+41:11/0 = 0
+42:11/0 = 0
+43:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+27:12/0 = 0
+28:12/0 = 0
+29:12/0 = 0
+30:12/0 = 0
+31:12/0 = 0
+32:12/0 = 0
+33:12/0 = 0
+34:12/0 = 0
+36:12/0 = 0
+37:12/0 = 0
+38:12/0 = 0
+39:12/0 = 0
+41:12/0 = 0
+42:12/0 = 0
+43:12/0 = 0
+44:12/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+27:13/0 = 0
+28:13/0 = 0
+29:13/0 = 0
+30:13/0 = 0
+31:13/0 = 0
+32:13/0 = 0
+33:13/0 = 0
+34:13/0 = 0
+36:13/0 = 0
+37:13/0 = 0
+38:13/0 = 0
+39:13/0 = 0
+41:13/0 = 0
+42:13/0 = 0
+43:13/0 = 0
+44:13/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+27:14/0 = 0
+28:14/0 = 0
+29:14/0 = 0
+30:14/0 = 0
+31:14/0 = 0
+32:14/0 = 0
+33:14/0 = 0
+34:14/0 = 0
+36:14/0 = 0
+37:14/0 = 0
+38:14/0 = 0
+39:14/0 = 0
+41:14/0 = 0
+42:14/0 = 0
+43:14/0 = 0
+44:14/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+24:15/0 = 0
+25:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_go5ld"]
+sources/0 = SubResource("TileSetAtlasSource_ii5kg")
+sources/1 = SubResource("TileSetAtlasSource_u0uho")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2b840"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u0uho"]
+sources/0 = SubResource("TileSetAtlasSource_2b840")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcbuo"]
+texture = ExtResource("3_vawdp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3xd07"]
+sources/0 = SubResource("TileSetAtlasSource_tcbuo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_if402"]
 texture = ExtResource("3_vawdp")
@@ -1048,796 +2534,6 @@ texture = ExtResource("5_u0uho")
 [sub_resource type="TileSet" id="TileSet_addqe"]
 sources/1 = SubResource("TileSetAtlasSource_76wly")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ii5kg"]
-texture = ExtResource("3_vawdp")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0uho"]
-texture = ExtResource("4_ii5kg")
-27:0/0 = 0
-28:0/0 = 0
-33:0/0 = 0
-34:0/0 = 0
-38:0/0 = 0
-39:0/0 = 0
-41:0/0 = 0
-42:0/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-17:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-20:1/0 = 0
-22:1/0 = 0
-23:1/0 = 0
-24:1/0 = 0
-25:1/0 = 0
-27:1/0 = 0
-28:1/0 = 0
-29:1/0 = 0
-32:1/0 = 0
-33:1/0 = 0
-34:1/0 = 0
-37:1/0 = 0
-38:1/0 = 0
-39:1/0 = 0
-41:1/0 = 0
-42:1/0 = 0
-43:1/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-17:2/0 = 0
-18:2/0 = 0
-19:2/0 = 0
-20:2/0 = 0
-22:2/0 = 0
-23:2/0 = 0
-24:2/0 = 0
-25:2/0 = 0
-27:2/0 = 0
-28:2/0 = 0
-29:2/0 = 0
-30:2/0 = 0
-31:2/0 = 0
-32:2/0 = 0
-33:2/0 = 0
-34:2/0 = 0
-36:2/0 = 0
-37:2/0 = 0
-38:2/0 = 0
-39:2/0 = 0
-41:2/0 = 0
-42:2/0 = 0
-43:2/0 = 0
-44:2/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-17:3/0 = 0
-18:3/0 = 0
-19:3/0 = 0
-20:3/0 = 0
-22:3/0 = 0
-23:3/0 = 0
-24:3/0 = 0
-25:3/0 = 0
-27:3/0 = 0
-28:3/0 = 0
-29:3/0 = 0
-30:3/0 = 0
-31:3/0 = 0
-32:3/0 = 0
-33:3/0 = 0
-34:3/0 = 0
-36:3/0 = 0
-37:3/0 = 0
-38:3/0 = 0
-39:3/0 = 0
-41:3/0 = 0
-42:3/0 = 0
-43:3/0 = 0
-44:3/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-17:4/0 = 0
-18:4/0 = 0
-19:4/0 = 0
-20:4/0 = 0
-22:4/0 = 0
-23:4/0 = 0
-24:4/0 = 0
-25:4/0 = 0
-27:4/0 = 0
-28:4/0 = 0
-29:4/0 = 0
-30:4/0 = 0
-31:4/0 = 0
-32:4/0 = 0
-33:4/0 = 0
-34:4/0 = 0
-36:4/0 = 0
-37:4/0 = 0
-38:4/0 = 0
-39:4/0 = 0
-41:4/0 = 0
-42:4/0 = 0
-43:4/0 = 0
-44:4/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-22:5/0 = 0
-23:5/0 = 0
-24:5/0 = 0
-25:5/0 = 0
-27:5/0 = 0
-28:5/0 = 0
-33:5/0 = 0
-34:5/0 = 0
-38:5/0 = 0
-39:5/0 = 0
-41:5/0 = 0
-42:5/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-17:6/0 = 0
-18:6/0 = 0
-19:6/0 = 0
-20:6/0 = 0
-22:6/0 = 0
-23:6/0 = 0
-24:6/0 = 0
-25:6/0 = 0
-27:6/0 = 0
-28:6/0 = 0
-29:6/0 = 0
-32:6/0 = 0
-33:6/0 = 0
-34:6/0 = 0
-37:6/0 = 0
-38:6/0 = 0
-39:6/0 = 0
-41:6/0 = 0
-42:6/0 = 0
-43:6/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-17:7/0 = 0
-18:7/0 = 0
-19:7/0 = 0
-20:7/0 = 0
-22:7/0 = 0
-23:7/0 = 0
-24:7/0 = 0
-25:7/0 = 0
-27:7/0 = 0
-28:7/0 = 0
-29:7/0 = 0
-30:7/0 = 0
-31:7/0 = 0
-32:7/0 = 0
-33:7/0 = 0
-34:7/0 = 0
-36:7/0 = 0
-37:7/0 = 0
-38:7/0 = 0
-39:7/0 = 0
-41:7/0 = 0
-42:7/0 = 0
-43:7/0 = 0
-44:7/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-17:8/0 = 0
-18:8/0 = 0
-19:8/0 = 0
-20:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
-24:8/0 = 0
-25:8/0 = 0
-27:8/0 = 0
-28:8/0 = 0
-29:8/0 = 0
-30:8/0 = 0
-31:8/0 = 0
-32:8/0 = 0
-33:8/0 = 0
-34:8/0 = 0
-36:8/0 = 0
-37:8/0 = 0
-38:8/0 = 0
-39:8/0 = 0
-41:8/0 = 0
-42:8/0 = 0
-43:8/0 = 0
-44:8/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
-20:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
-24:9/0 = 0
-25:9/0 = 0
-27:9/0 = 0
-28:9/0 = 0
-29:9/0 = 0
-30:9/0 = 0
-31:9/0 = 0
-32:9/0 = 0
-33:9/0 = 0
-34:9/0 = 0
-36:9/0 = 0
-37:9/0 = 0
-38:9/0 = 0
-39:9/0 = 0
-41:9/0 = 0
-42:9/0 = 0
-43:9/0 = 0
-44:9/0 = 0
-17:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
-24:10/0 = 0
-25:10/0 = 0
-27:10/0 = 0
-28:10/0 = 0
-33:10/0 = 0
-34:10/0 = 0
-38:10/0 = 0
-39:10/0 = 0
-41:10/0 = 0
-42:10/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-17:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-20:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
-24:11/0 = 0
-25:11/0 = 0
-27:11/0 = 0
-28:11/0 = 0
-29:11/0 = 0
-32:11/0 = 0
-33:11/0 = 0
-34:11/0 = 0
-37:11/0 = 0
-38:11/0 = 0
-39:11/0 = 0
-41:11/0 = 0
-42:11/0 = 0
-43:11/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-20:12/0 = 0
-22:12/0 = 0
-23:12/0 = 0
-24:12/0 = 0
-25:12/0 = 0
-27:12/0 = 0
-28:12/0 = 0
-29:12/0 = 0
-30:12/0 = 0
-31:12/0 = 0
-32:12/0 = 0
-33:12/0 = 0
-34:12/0 = 0
-36:12/0 = 0
-37:12/0 = 0
-38:12/0 = 0
-39:12/0 = 0
-41:12/0 = 0
-42:12/0 = 0
-43:12/0 = 0
-44:12/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-10:13/0 = 0
-11:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-17:13/0 = 0
-18:13/0 = 0
-19:13/0 = 0
-20:13/0 = 0
-22:13/0 = 0
-23:13/0 = 0
-24:13/0 = 0
-25:13/0 = 0
-27:13/0 = 0
-28:13/0 = 0
-29:13/0 = 0
-30:13/0 = 0
-31:13/0 = 0
-32:13/0 = 0
-33:13/0 = 0
-34:13/0 = 0
-36:13/0 = 0
-37:13/0 = 0
-38:13/0 = 0
-39:13/0 = 0
-41:13/0 = 0
-42:13/0 = 0
-43:13/0 = 0
-44:13/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-17:14/0 = 0
-18:14/0 = 0
-19:14/0 = 0
-20:14/0 = 0
-22:14/0 = 0
-23:14/0 = 0
-24:14/0 = 0
-25:14/0 = 0
-27:14/0 = 0
-28:14/0 = 0
-29:14/0 = 0
-30:14/0 = 0
-31:14/0 = 0
-32:14/0 = 0
-33:14/0 = 0
-34:14/0 = 0
-36:14/0 = 0
-37:14/0 = 0
-38:14/0 = 0
-39:14/0 = 0
-41:14/0 = 0
-42:14/0 = 0
-43:14/0 = 0
-44:14/0 = 0
-17:15/0 = 0
-18:15/0 = 0
-19:15/0 = 0
-20:15/0 = 0
-22:15/0 = 0
-23:15/0 = 0
-24:15/0 = 0
-25:15/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_go5ld"]
-sources/0 = SubResource("TileSetAtlasSource_ii5kg")
-sources/1 = SubResource("TileSetAtlasSource_u0uho")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2b840"]
-texture = ExtResource("3_vawdp")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_u0uho"]
-sources/0 = SubResource("TileSetAtlasSource_2b840")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0500n"]
 texture = ExtResource("3_vawdp")
 0:0/0 = 0
@@ -2098,22 +2794,600 @@ sources/0 = SubResource("TileSetAtlasSource_addqe")
 [node name="Walls_layer1" parent="." index="0" unique_id=528072641]
 tile_map_data = PackedByteArray("AAAAAAAAAAAOAAAAAAAAAAEAAAAOAAEAAAAAAAIAAAAOAAEAAAAAAAMAAAAOAAEAAAABAAAAAAAPAAAAAAABAAEAAAAPAAEAAAABAAIAAAAPAAEAAAABAAMAAAAPAAEAAAACAAAAAAAOAAAAAAACAAEAAAAOAAEAAAACAAIAAAAPAAIAAAACAAMAAQAPAAIAAAADAAAAAAAPAAAAAAADAAEAAAAPAAEAAAADAAIAAAAPAAIAAAADAAMAAQAPAAIAAAAEAAAAAAAOAAAAAAAEAAEAAAAOAAEAAAAEAAIAAAAPAAIAAAAEAAMAAQAPAAIAAAAFAAAAAAAPAAAAAAAFAAEAAAAPAAEAAAAFAAIAAAAPAAIAAAAFAAMAAQAPAAIAAAAGAAAAAAAOAAAAAAAGAAEAAAAOAAEAAAAGAAIAAAAPAAIAAAAGAAMAAQAPAAIAAAAHAAAAAAAPAAAAAAAHAAEAAAAPAAEAAAAHAAIAAAAPAAIAAAAHAAMAAQAPAAIAAAAIAAAAAAAOAAAAAAAIAAEAAAAOAAEAAAAIAAIAAAAPAAIAAAAIAAMAAQAPAAIAAAAJAAAAAAAPAAAAAAAJAAEAAAAPAAEAAAAJAAIAAAAPAAIAAAAJAAMAAQAPAAIAAAAKAAAAAAAOAAAAAAAKAAEAAAAOAAEAAAAKAAIAAAAPAAIAAAAKAAMAAQAPAAIAAAALAAAAAAAPAAAAAAALAAEAAAAPAAEAAAALAAIAAAAPAAIAAAALAAMAAQAPAAIAAAAMAAAAAAAOAAAAAAAMAAEAAAAOAAEAAAAMAAIAAAAPAAIAAAAMAAMAAQAPAAIAAAANAAAAAAAPAAAAAAANAAEAAAAPAAEAAAANAAIAAAAPAAIAAAANAAMAAQAPAAIAAAAOAAAAAAAOAAAAAAAOAAEAAAAOAAEAAAAOAAIAAAAPAAIAAAAOAAMAAQAPAAIAAAAPAAAAAAAPAAAAAAAPAAEAAAAPAAEAAAAPAAIAAAAPAAIAAAAPAAMAAQAPAAIAAAAQAAAAAAAOAAAAAAAQAAEAAAAOAAEAAAAQAAIAAAAPAAIAAAAQAAMAAQAPAAIAAAARAAAAAAAPAAAAAAARAAEAAAAPAAEAAAARAAIAAAAPAAIAAAARAAMAAQAPAAIAAAASAAAAAAAOAAAAAAASAAEAAAAOAAEAAAASAAIAAAAPAAIAAAASAAMAAQAPAAIAAAATAAAAAAAPAAAAAAATAAEAAAAPAAEAAAATAAIAAAAPAAIAAAATAAMAAQAPAAIAAAAUAAAAAAAOAAAAAAAUAAEAAAAOAAEAAAAUAAIAAAAPAAIAAAAUAAMAAQAPAAIAAAAVAAAAAAAPAAAAAAAVAAEAAAAPAAEAAAAVAAIAAAAPAAIAAAAVAAMAAQAPAAIAAAAWAAAAAAAOAAAAAAAWAAEAAAAOAAEAAAAWAAIAAAAPAAIAAAAWAAMAAQAPAAIAAAAXAAAAAAAPAAAAAAAXAAEAAAAPAAEAAAAXAAIAAAAPAAIAAAAXAAMAAQAPAAIAAAAYAAAAAAAOAAAAAAAYAAEAAAAOAAEAAAAYAAIAAAAPAAIAAAAYAAMAAQAPAAIAAAAZAAAAAAAPAAAAAAAZAAEAAAAPAAEAAAAZAAIAAAAPAAIAAAAZAAMAAQAPAAIAAAAaAAAAAAAOAAAAAAAaAAEAAAAOAAEAAAAaAAIAAAAPAAIAAAAaAAMAAQAPAAIAAAAbAAAAAAAPAAAAAAAbAAEAAAAPAAEAAAAbAAIAAAAPAAIAAAAbAAMAAQAPAAIAAAAcAAAAAAAOAAAAAAAcAAEAAAAOAAEAAAAcAAIAAAAPAAIAAAAcAAMAAQAPAAIAAAAdAAAAAAAPAAAAAAAdAAEAAAAPAAEAAAAdAAIAAAAPAAIAAAAdAAMAAQAPAAIAAAAeAAAAAAAOAAAAAAAeAAEAAAAOAAEAAAAeAAIAAAAPAAIAAAAeAAMAAQAPAAIAAAAfAAAAAAAPAAAAAAAfAAEAAAAPAAEAAAAfAAIAAAAPAAIAAAAfAAMAAQAPAAIAAAAgAAAAAAAOAAAAAAAgAAEAAAAOAAEAAAAgAAIAAAAPAAIAAAAgAAMAAQAPAAIAAAAhAAAAAAAPAAAAAAAhAAEAAAAPAAEAAAAhAAIAAAAPAAIAAAAhAAMAAQAPAAIAAAAiAAAAAAAOAAAAAAAiAAEAAAAOAAEAAAAiAAIAAAAPAAEAAAAiAAMAAAAPAAEAAAAjAAAAAAAPAAAAAAAjAAEAAAAPAAEAAAAjAAIAAAAPAAIAAAAjAAMAAQAPAAIAAAAkAAAAAAAOAAAAAAAkAAEAAAAOAAEAAAAkAAIAAAAPAAIAAAAkAAMAAQAPAAIAAAAlAAAAAAAPAAAAAAAlAAEAAAAPAAEAAAAlAAIAAAAPAAIAAAAlAAMAAQAPAAIAAAAAAAQAAAAOAAEAAAABAAQAAAAPAAEAAAAAAAUAAAAOAAEAAAABAAUAAAAPAAEAAAAAAAYAAAAOAAEAAAABAAYAAAAPAAEAAAAAAAcAAAAOAAEAAAABAAcAAAAPAAEAAAAAAAgAAAAOAAEAAAABAAgAAAAPAAEAAAAAAAkAAAAOAAEAAAABAAkAAAAPAAEAAAAAAAoAAAAOAAEAAAABAAoAAAAPAAEAAAAAAAsAAAAOAAEAAAABAAsAAAAPAAEAAAAAAAwAAAAOAAEAAAABAAwAAAAPAAEAAAAAAA0AAAAOAAEAAAABAA0AAAAPAAEAAAAAAA4AAAAOAAEAAAABAA4AAAAPAAEAAAAAAA8AAAAOAAEAAAABAA8AAAAPAAEAAAAAABAAAAAOAAEAAAABABAAAAAPAAEAAAAAABEAAAAOAAEAAAABABEAAAAPAAEAAAAAABIAAAAOAAEAAAABABIAAAAPAAEAAAAAABMAAAAOAAEAAAAAABQAAAAOAAEAAAAAABUAAAAOAAEAAAAAABYAAAAOAAEAAAAAABcAAAAOAAEAAAABABMAAAAOAAEAAAABABQAAAAOAAEAAAABABUAAAAOAAEAAAABABYAAAAOAAEAAAABABcAAAAOAAEAAAACABYAAAAOAAAAAAACABcAAAAOAAEAAAADABYAAAAPAAAAAAADABcAAAAPAAEAAAAEABYAAAAOAAAAAAAEABcAAAAOAAEAAAAFABYAAAAPAAAAAAAFABcAAAAPAAEAAAAGABYAAAAOAAAAAAAGABcAAAAOAAEAAAAHABYAAAAPAAAAAAAHABcAAAAPAAEAAAAIABYAAAAOAAAAAAAIABcAAAAOAAEAAAAJABYAAAAPAAAAAAAJABcAAAAPAAEAAAAKABYAAAAOAAAAAAAKABcAAAAOAAEAAAALABYAAAAPAAAAAAALABcAAAAPAAEAAAAMABYAAAAOAAAAAAAMABcAAAAOAAEAAAANABYAAAAPAAAAAAANABcAAAAPAAEAAAAOABYAAAAOAAAAAAAOABcAAAAOAAEAAAAPABYAAAAPAAAAAAAPABcAAAAPAAEAAAAQABYAAAAOAAAAAAAQABcAAAAOAAEAAAARABYAAAAPAAAAAAARABcAAAAPAAEAAAASABYAAAAOAAAAAAASABcAAAAOAAEAAAATABYAAAAPAAAAAAATABcAAAAPAAEAAAAUABYAAAAOAAAAAAAUABcAAAAOAAEAAAAVABYAAAAPAAAAAAAVABcAAAAPAAEAAAAWABYAAAAOAAAAAAAWABcAAAAOAAEAAAAXABYAAAAPAAAAAAAXABcAAAAPAAEAAAAYABYAAAAOAAAAAAAYABcAAAAOAAEAAAAZABYAAAAPAAAAAAAZABcAAAAPAAEAAAAaABYAAAAOAAAAAAAaABcAAAAOAAEAAAAbABYAAAAPAAAAAAAbABcAAAAPAAEAAAAcABYAAAAOAAAAAAAcABcAAAAOAAEAAAAdABYAAAAPAAAAAAAdABcAAAAPAAEAAAAeABYAAAAOAAAAAAAeABcAAAAOAAEAAAAfABYAAAAPAAAAAAAfABcAAAAPAAEAAAAgABYAAAAOAAAAAAAgABcAAAAOAAEAAAAhABYAAAAPAAAAAAAhABcAAAAPAAEAAAAiABYAAAAOAAAAAAAiABcAAAAOAAEAAAAjABYAAAAPAAAAAAAjABcAAAAPAAEAAAAkABYAAAAOAAAAAAAkABcAAAAOAAEAAAAlABYAAAAPAAAAAAAlABcAAAAPAAEAAAAmABYAAAAOAAAAAAAmABcAAAAOAAEAAAAnABYAAAAPAAAAAAAnABcAAAAPAAEAAAAoABYAAAAOAAAAAAAoABcAAAAOAAEAAAApABYAAAAPAAAAAAApABcAAAAPAAEAAAAqABYAAAAOAAAAAAAqABcAAAAOAAEAAAArABYAAAAPAAAAAAArABcAAAAPAAEAAAAsABYAAAAOAAEAAAAsABcAAAAOAAEAAAAtABYAAAAOAAEAAAAtABcAAAAOAAEAAAAAABgAAQAPAAIAAAAAABkAAQAPAAIAAAABABgAAQAPAAIAAAABABkAAQAPAAIAAAACABgAAQAPAAIAAAACABkAAQAPAAIAAAADABgAAQAPAAIAAAADABkAAQAPAAIAAAAEABgAAQAPAAIAAAAEABkAAQAPAAIAAAAFABgAAQAPAAIAAAAFABkAAQAPAAIAAAAGABgAAQAPAAIAAAAGABkAAQAPAAIAAAAHABgAAQAPAAIAAAAHABkAAQAPAAIAAAAIABgAAQAPAAIAAAAIABkAAQAPAAIAAAAJABgAAQAPAAIAAAAJABkAAQAPAAIAAAAKABgAAQAPAAIAAAAKABkAAQAPAAIAAAALABgAAQAPAAIAAAALABkAAQAPAAIAAAAMABgAAQAPAAIAAAAMABkAAQAPAAIAAAANABgAAQAPAAIAAAANABkAAQAPAAIAAAAOABgAAQAPAAIAAAAOABkAAQAPAAIAAAAPABgAAQAPAAIAAAAPABkAAQAPAAIAAAAQABgAAQAPAAIAAAAQABkAAQAPAAIAAAARABgAAQAPAAIAAAARABkAAQAPAAIAAAASABgAAQAPAAIAAAASABkAAQAPAAIAAAATABgAAQAPAAIAAAATABkAAQAPAAIAAAAUABgAAQAPAAIAAAAUABkAAQAPAAIAAAAVABgAAQAPAAIAAAAVABkAAQAPAAIAAAAWABgAAQAPAAIAAAAWABkAAQAPAAIAAAAXABgAAQAPAAIAAAAXABkAAQAPAAIAAAAYABgAAQAPAAIAAAAYABkAAQAPAAIAAAAZABgAAQAPAAIAAAAZABkAAQAPAAIAAAAaABgAAQAPAAIAAAAaABkAAQAPAAIAAAAbABgAAQAPAAIAAAAbABkAAQAPAAIAAAAcABgAAQAPAAIAAAAcABkAAQAPAAIAAAAdABgAAQAPAAIAAAAdABkAAQAPAAIAAAAeABgAAQAPAAIAAAAeABkAAQAPAAIAAAAfABgAAQAPAAIAAAAfABkAAQAPAAIAAAAgABgAAQAPAAIAAAAgABkAAQAPAAIAAAAhABgAAQAPAAIAAAAhABkAAQAPAAIAAAAiABgAAQAPAAIAAAAiABkAAQAPAAIAAAAjABgAAQAPAAIAAAAjABkAAQAPAAIAAAAkABgAAQAPAAIAAAAkABkAAQAPAAIAAAAlABgAAQAPAAIAAAAlABkAAQAPAAIAAAAmABgAAQAPAAIAAAAmABkAAQAPAAIAAAAnABgAAQAPAAIAAAAnABkAAQAPAAIAAAAoABgAAQAPAAIAAAAoABkAAQAPAAIAAAApABgAAQAPAAIAAAApABkAAQAPAAIAAAAqABgAAQAPAAIAAAAqABkAAQAPAAIAAAArABgAAQAPAAIAAAArABkAAQAPAAIAAAAsABgAAQAPAAIAAAAsABkAAQAPAAIAAAAtABgAAQAPAAIAAAAtABkAAQAPAAIAAAAmAAAAAAAOAAAAAAAmAAEAAAAOAAEAAAAnAAAAAAAPAAAAAAAnAAEAAAAPAAEAAAAoAAAAAAAOAAAAAAAoAAEAAAAOAAEAAAApAAAAAAAPAAAAAAApAAEAAAAPAAEAAAAqAAAAAAAOAAAAAAAqAAEAAAAOAAEAAAArAAAAAAAPAAAAAAArAAEAAAAPAAEAAAAsAAAAAAAOAAAAAAAsAAEAAAAOAAEAAAAtAAAAAAAPAAAAAAAtAAEAAAAOAAEAAAAsAAIAAAAOAAEAAAAsAAMAAAAOAAEAAAAsAAQAAAAOAAEAAAAsAAUAAAAOAAEAAAAsAAYAAAAOAAEAAAAsAAcAAAAOAAEAAAAsAAgAAAAOAAEAAAAsAAkAAAAOAAEAAAAsAAoAAAAOAAEAAAAsAAsAAAAOAAEAAAAsAAwAAAAOAAEAAAAsAA0AAAAOAAEAAAAsAA4AAAAOAAEAAAAsAA8AAAAOAAEAAAAsABAAAAAOAAEAAAAsABEAAAAOAAEAAAAsABIAAAAOAAEAAAAtAAIAAAAOAAEAAAAtAAMAAAAOAAEAAAAtAAQAAAAOAAEAAAAtAAUAAAAOAAEAAAAtAAYAAAAOAAEAAAAtAAcAAAAOAAEAAAAtAAgAAAAOAAEAAAAtAAkAAAAOAAEAAAAtAAoAAAAOAAEAAAAtAAsAAAAOAAEAAAAtAAwAAAAOAAEAAAAtAA0AAAAOAAEAAAAtAA4AAAAOAAEAAAAtAA8AAAAOAAEAAAAtABAAAAAOAAEAAAAtABEAAAAOAAEAAAAtABIAAAAOAAEAAAAsABMAAAAOAAEAAAAsABQAAAAOAAEAAAAsABUAAAAOAAEAAAAtABMAAAAOAAEAAAAtABQAAAAOAAEAAAAtABUAAAAOAAEAAAAmAAIAAAAPAAIAAAAnAAIAAAAPAAIAAAAoAAIAAAAPAAIAAAApAAIAAAAPAAIAAAAqAAIAAAAPAAIAAAArAAIAAAAPAAIAAAAmAAMAAQAPAAIAAAAnAAMAAQAPAAIAAAAoAAMAAQAPAAIAAAApAAMAAQAPAAIAAAAqAAMAAQAPAAIAAAArAAMAAQAPAAIAAAAiAAQAAAAPAAEAAAAiAAUAAAAPAAEAAAAiAAYAAAAPAAEAAAAiAAcAAAAPAAEAAAAiAAgAAAAPAAEAAAAiAAkAAAAPAAEAAAAiAAoAAAAPAAEAAAAiAAsAAAAPAAEAAAAiAAwAAAAPAAEAAAAiAA0AAAAPAAEAAAAiAA4AAAAPAAIAAAAjAA0AAAAOAAAAAAAkAA0AAAAOAAAAAAAlAA0AAAAOAAAAAAAjAA4AAAAPAAIAAAAlAA4AAAAPAAIAAAAkAA4AAAAPAAIAAAArAA0AAAAOAAAAAAAqAA0AAAAOAAAAAAAqAA4AAAAPAAIAAAAqAA8AAQAPAAIAAAArAA8AAQAPAAIAAAArAA4AAAAPAAIAAAApAA0AAAAPAAAAAAApAA4AAAAPAAIAAAApAA8AAQAPAAIAAAAiAA8AAQAPAAIAAAAjAA8AAQAPAAIAAAAkAA8AAQAPAAIAAAAlAA8AAQAPAAIAAAAoAA4AAAAPAAIAAAAoAA8AAQAPAAIAAAAoAA0AAAAPAAAAAAA=")
 
-[node name="Walls_layer2" type="TileMapLayer" parent="." index="1" unique_id=775739036]
+[node name="Komputer" type="TileMapLayer" parent="Walls_layer1" index="0" unique_id=935600395]
+position = Vector2(37.142845, 0)
+tile_map_data = PackedByteArray("AAAlAAUAAAAFAAQAAAAlAAYAAAAFAAUAAAAkAAUAAAAEAAQAAAAkAAYAAAAEAAUAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Lemari Komputer" type="TileMapLayer" parent="Walls_layer1/Komputer" index="0" unique_id=1445768082]
+position = Vector2(8.571434, -2.8571413)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAiAAUAAAAKAAQAAAAiAAYAAAAKAAUAAAAjAAUAAAALAAQAAAAjAAYAAAALAAUAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Kursi" type="TileMapLayer" parent="Walls_layer1/Komputer" index="1" unique_id=2094026876]
+position = Vector2(296.0002, -173.14273)
+scale = Vector2(1.2499994, 1.2499994)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="meja 1" type="TileMapLayer" parent="Walls_layer1/Komputer" index="2" unique_id=745693123]
+position = Vector2(-45.714264, 38.2857)
+scale = Vector2(1.3499999, 1.3499999)
+tile_map_data = PackedByteArray("AAAcAAMAAAAAAAgAAAAcAAQAAAAAAAkAAAAdAAMAAAABAAgAAAAdAAQAAAABAAkAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="meja 2" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1" index="0" unique_id=66212720]
+position = Vector2(13.968255, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAdAAMAAAABAAgAAAAdAAQAAAABAAkAAAAcAAQAAAAAAAkAAAAcAAMAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="meja 3" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1" index="1" unique_id=1730197903]
+position = Vector2(27.936508, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAcAAMAAAAAAAgAAAAdAAMAAAABAAgAAAAdAAQAAAABAAkAAAAcAAQAAAAAAAkAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="meja 4" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1" index="2" unique_id=1107515942]
+position = Vector2(27.936512, 1.6931229)
+scale = Vector2(0.61, 0.61)
+tile_map_data = PackedByteArray("AAAwAAQAAAAIAAIAAFAwAAUAAAAJAAIAAFAvAAQAAAAIAAMAAFAvAAUAAAAJAAMAAFA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Kertas" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1" index="3" unique_id=1173897898]
+position = Vector2(261.58743, -161.26978)
+scale = Vector2(0.48148143, 0.48148143)
+tile_map_data = PackedByteArray("AAAZABwAAAAAAAYAAAAZAB0AAAAAAAcAAAAaABwAAAABAAYAAAAaAB0AAAABAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Mesin Kopi" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1/Kertas" index="0" unique_id=1106638697]
+position = Vector2(19.340576, 0)
+tile_map_data = PackedByteArray("AAAcABwAAAAAAAQAAAAcAB0AAAAAAAUAAAAdABwAAAABAAQAAAAdAB0AAAABAAUAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="kertas" type="TileMapLayer" parent="Walls_layer1/Komputer/meja 1/Kertas" index="1" unique_id=137910446]
+position = Vector2(-17.58252, 0)
+tile_map_data = PackedByteArray("AAAbABwAAAAEAAYAAAAbAB0AAAAEAAcAAAAcABwAAAAFAAYAAAAcAB0AAAAFAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Walls_layer1" index="1" unique_id=514190542]
+position = Vector2(51.42858, -14.285713)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAVAAgAAAAAAAIAAAAVAAkAAAAAAAMAAAAWAAgAAAABAAIAAAAWAAkAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Jam" type="TileMapLayer" parent="Walls_layer1" index="2" unique_id=602510279]
+position = Vector2(51.42858, -14.285713)
+tile_map_data = PackedByteArray("AAAgAAMAAAAKAAgAAAAgAAQAAAAKAAkAAAAhAAMAAAALAAgAAAAhAAQAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Kertas" type="TileMapLayer" parent="Walls_layer1" index="3" unique_id=1373945147]
+position = Vector2(47.428574, -6.8571424)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAATAAEAAAACAAoAAAATAAIAAAACAAsAAAAUAAEAAAADAAoAAAAUAAIAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Lemari" type="TileMapLayer" parent="Walls_layer1" index="4" unique_id=1862158089]
+position = Vector2(49.142845, -6.857142)
+tile_map_data = PackedByteArray("AAAnAAMAAAAIAAYAAAAnAAQAAAAIAAcAAAAoAAMAAAAJAAYAAAAoAAQAAAAJAAcAAAAlAAMAAAAGAAQAAAAlAAQAAAAGAAUAAAAmAAMAAAAHAAQAAAAmAAQAAAAHAAUAAAA=")
+tile_set = SubResource("TileSet_6fhyq")
+
+[node name="Design ruangan" type="TileMapLayer" parent="." index="1" unique_id=1595859060]
+
+[node name="Minuman" type="TileMapLayer" parent="Design ruangan" index="0" unique_id=1838398782]
+position = Vector2(9.999999, -19.999996)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAfAAMAAAAIAAgAAAAfAAQAAAAIAAkAAAAgAAMAAAAJAAgAAAAgAAQAAAAJAAkAAAAdAAMAAAAIAAgAAAAdAAQAAAAIAAkAAAAeAAMAAAAJAAgAAAAeAAQAAAAJAAkAAAAUAAMAAAAGAAoAAAAUAAQAAAAGAAsAAAAVAAMAAAAHAAoAAAAVAAQAAAAHAAsAAAALAAMAAAAGAAoAAAALAAQAAAAGAAsAAAAMAAMAAAAHAAoAAAAMAAQAAAAHAAsAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself" type="TileMapLayer" parent="Design ruangan" index="1" unique_id=432257775]
+position = Vector2(16.999996, -19.999996)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself2" type="TileMapLayer" parent="Design ruangan/Bookself" index="0" unique_id=1273542437]
+position = Vector2(-13.714285, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself3" type="TileMapLayer" parent="Design ruangan/Bookself" index="1" unique_id=127583410]
+position = Vector2(-27.428574, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself4" type="TileMapLayer" parent="Design ruangan/Bookself" index="2" unique_id=707990930]
+position = Vector2(-41.142853, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself5" type="TileMapLayer" parent="Design ruangan/Bookself" index="3" unique_id=1272783818]
+position = Vector2(-54.857132, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself6" type="TileMapLayer" parent="Design ruangan/Bookself" index="4" unique_id=722597262]
+position = Vector2(-68.57141, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself7" type="TileMapLayer" parent="Design ruangan/Bookself" index="5" unique_id=1364779842]
+position = Vector2(13.714296, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself2" type="TileMapLayer" parent="Design ruangan" index="2" unique_id=226850727]
+position = Vector2(-241.99997, -19.999996)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself2" type="TileMapLayer" parent="Design ruangan/Bookself2" index="0" unique_id=1947242779]
+position = Vector2(-13.714285, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself3" type="TileMapLayer" parent="Design ruangan/Bookself2" index="1" unique_id=894302320]
+position = Vector2(-27.428574, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself4" type="TileMapLayer" parent="Design ruangan/Bookself2" index="2" unique_id=1070142418]
+position = Vector2(-41.142853, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself5" type="TileMapLayer" parent="Design ruangan/Bookself2" index="3" unique_id=1898475087]
+position = Vector2(-54.857132, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself6" type="TileMapLayer" parent="Design ruangan/Bookself2" index="4" unique_id=487798043]
+position = Vector2(-68.57141, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Bookself7" type="TileMapLayer" parent="Design ruangan/Bookself2" index="5" unique_id=1182206526]
+position = Vector2(13.714296, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAaAAQAAAACAAkAAAAaAAMAAAACAAgAAAAbAAQAAAADAAkAAAAbAAMAAAADAAgAAAA=")
+tile_set = SubResource("TileSet_dwbtc")
+
+[node name="Ruang_Karyawan_1" type="TileMapLayer" parent="." index="2" unique_id=775739036]
+position = Vector2(-15.999999, -17)
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAJABYAAAAPAAEAAAAJABcAAAAOAAEAAAAJABgAAAAPAAIAAAAKAAsAAAAPAAIAAAAKABYAAAAPAAIAAAALAAsAAAAPAAIAAAALABYAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAMABQAAAAPAAAAAAAMABUAAAAPAAIAAAAMABYAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAJABQAAAAPAAAAAAAJABUAAAAPAAEAAAAJABkAAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAAKABQAAAAPAAAAAAAKABUAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAALABQAAAAPAAAAAAALABUAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAANAA4AAAAPAAAAAAANAA8AAAAPAAIAAAANABAAAAAPAAIAAAANABQAAAAPAAAAAAANABUAAAAPAAIAAAANABYAAAAPAAIAAAANABkAAAAPAAAAAAANABoAAAAPAAIAAAANABsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAOAA4AAAAPAAAAAAAOAA8AAAAPAAIAAAAOABAAAAAPAAIAAAAOABQAAAAPAAAAAAAOABUAAAAPAAIAAAAOABYAAAAPAAIAAAAOABkAAAAPAAAAAAAOABoAAAAPAAIAAAAOABsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAPAA4AAAAPAAAAAAAPAA8AAAAPAAIAAAAPABAAAAAPAAIAAAAPABQAAAAPAAAAAAAPABUAAAAPAAIAAAAPABYAAAAPAAIAAAAPABkAAAAPAAAAAAAPABoAAAAPAAIAAAAPABsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAAQAA4AAAAPAAEAAAAQAA8AAAAPAAIAAAAQABAAAAAPAAIAAAAQABQAAAAPAAAAAAAQABUAAAAPAAEAAAAQABYAAAAPAAEAAAAQABcAAAAPAAEAAAAQABgAAAAPAAEAAAAQABkAAAAPAAEAAAAQABoAAAAPAAIAAAAQABsAAAAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
 tile_set = SubResource("TileSet_bhunq")
 
-[node name="Walls_layer3" type="TileMapLayer" parent="." index="2" unique_id=1146716920]
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_1" index="0" unique_id=343355797]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_1" index="1" unique_id=1093448324]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_1" index="2" unique_id=1534690660]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_1/Kertas_1" index="0" unique_id=3459859]
+position = Vector2(65.0667, 39.466682)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_1" index="3" unique_id=1966017736]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="POT BUNGA" type="TileMapLayer" parent="Ruang_Karyawan_1" index="4" unique_id=1328758389]
+position = Vector2(-7.199999, -3.199999)
+tile_map_data = PackedByteArray("AAAMAAoAAAAKAAYAAAAMAAsAAAAKAAcAAAANAAoAAAALAAYAAAANAAsAAAALAAcAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_1" index="5" unique_id=895694265]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_1" index="6" unique_id=802446503]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_1" index="7" unique_id=1699852375]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_1" index="8" unique_id=850284637]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Ruang_Karyawan_2" type="TileMapLayer" parent="." index="3" unique_id=1349820223]
+position = Vector2(-13.999999, 213.99997)
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AAAWAAkAAAAOAAAAAAAWAAoAAAAPAAEAAAAWAAsAAAAPAAEAAAAWAAwAAAAPAAEAAAAWAA0AAAAPAAIAAAAWAA4AAAAPAAIAAAAWABQAAAAPAAAAAAAWABUAAAAPAAEAAAAWABYAAAAPAAEAAAAWABcAAAAOAAEAAAAWABgAAAAPAAIAAAAWABkAAAAPAAIAAAAXAAkAAAAOAAAAAAAXAAoAAAAPAAIAAAAXAAsAAAAPAAIAAAAXABQAAAAPAAAAAAAXABUAAAAPAAIAAAAXABYAAAAPAAIAAAAYAAkAAAAOAAAAAAAYAAoAAAAPAAIAAAAYAAsAAAAPAAIAAAAYABQAAAAPAAAAAAAYABUAAAAPAAIAAAAYABYAAAAPAAIAAAAZAAkAAAAOAAAAAAAZAAoAAAAPAAIAAAAZAAsAAAAPAAIAAAAZABQAAAAPAAAAAAAZABUAAAAPAAIAAAAZABYAAAAPAAIAAAAaAAkAAAAOAAAAAAAaAAoAAAAPAAIAAAAaAAsAAAAPAAIAAAAaAA4AAAAPAAAAAAAaAA8AAAAPAAIAAAAaABAAAAAPAAIAAAAaABQAAAAPAAAAAAAaABUAAAAPAAIAAAAaABYAAAAPAAIAAAAaABkAAAAPAAAAAAAaABoAAAAPAAIAAAAaABsAAAAPAAIAAAAbAAkAAAAOAAAAAAAbAAoAAAAPAAIAAAAbAAsAAAAPAAIAAAAbAA4AAAAPAAAAAAAbAA8AAAAPAAIAAAAbABAAAAAPAAIAAAAbABQAAAAPAAAAAAAbABUAAAAPAAIAAAAbABYAAAAPAAIAAAAbABkAAAAPAAAAAAAbABoAAAAPAAIAAAAbABsAAAAPAAIAAAAcAAkAAAAOAAAAAAAcAAoAAAAPAAIAAAAcAAsAAAAPAAIAAAAcAA4AAAAPAAAAAAAcAA8AAAAPAAIAAAAcABAAAAAPAAIAAAAcABQAAAAPAAAAAAAcABUAAAAPAAIAAAAcABYAAAAPAAIAAAAcABkAAAAPAAAAAAAcABoAAAAPAAIAAAAcABsAAAAPAAIAAAAdAAkAAAAOAAAAAAAdAAoAAAAPAAEAAAAdAAsAAAAPAAEAAAAdAAwAAAAPAAEAAAAdAA0AAAAPAAEAAAAdAA4AAAAPAAEAAAAdAA8AAAAPAAIAAAAdABAAAAAPAAIAAAAdABQAAAAPAAAAAAAdABUAAAAPAAEAAAAdABYAAAAPAAEAAAAdABcAAAAPAAEAAAAdABgAAAAPAAEAAAAdABkAAAAPAAEAAAAdABoAAAAPAAIAAAAdABsAAAAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
 tile_set = SubResource("TileSet_bhunq")
 
-[node name="Walls_layer4" type="TileMapLayer" parent="." index="3" unique_id=22516018]
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_2" index="0" unique_id=59949692]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_2" index="1" unique_id=1790431895]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_2" index="2" unique_id=624733162]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_2/Kertas_1" index="0" unique_id=1965431129]
+position = Vector2(65.0667, 39.466705)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_2" index="3" unique_id=419762795]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="Berkas" type="TileMapLayer" parent="Ruang_Karyawan_2" index="4" unique_id=1607333608]
+position = Vector2(-3.2000008, -6.399994)
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAYABYAAAAMAAQAAAAYABcAAAAMAAUAAAAZABYAAAANAAQAAAAZABcAAAANAAUAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Berkas2" type="TileMapLayer" parent="Ruang_Karyawan_2" index="5" unique_id=682618350]
+position = Vector2(4.799999, -6.399994)
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAYABYAAAAMAAQAAAAYABcAAAAMAAUAAAAZABYAAAANAAQAAAAZABcAAAANAAUAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Kursi 2" type="TileMapLayer" parent="Ruang_Karyawan_2" index="6" unique_id=259362054]
+position = Vector2(-6.4000006, -0.80003357)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAIAAcAAAAMAAIAAAAIAAgAAAAMAAMAAAAJAAcAAAANAAIAAAAJAAgAAAANAAMAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_2" index="7" unique_id=1354104865]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_2" index="8" unique_id=1742545765]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_2" index="9" unique_id=1225970622]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_2" index="10" unique_id=1445934444]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Ruang_Karyawan_3" type="TileMapLayer" parent="." index="4" unique_id=1046168049]
+position = Vector2(233.99997, 213.99998)
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AAAjAAkAAAAOAAAAAAAjAAoAAAAPAAEAAAAjAAsAAAAPAAEAAAAjAAwAAAAPAAEAAAAjAA0AAAAPAAIAAAAjAA4AAAAPAAIAAAAjABQAAAAPAAAAAAAjABUAAAAPAAEAAAAjABYAAAAPAAEAAAAjABcAAAAOAAEAAAAjABgAAAAPAAIAAAAjABkAAAAPAAIAAAAkAAkAAAAOAAAAAAAkAAoAAAAPAAIAAAAkAAsAAAAPAAIAAAAkABQAAAAPAAAAAAAkABUAAAAPAAIAAAAkABYAAAAPAAIAAAAlAAkAAAAOAAAAAAAlAAoAAAAPAAIAAAAlAAsAAAAPAAIAAAAlABQAAAAPAAAAAAAlABUAAAAPAAIAAAAlABYAAAAPAAIAAAAmAAkAAAAOAAAAAAAmAAoAAAAPAAIAAAAmAAsAAAAPAAIAAAAmABQAAAAPAAAAAAAmABUAAAAPAAIAAAAmABYAAAAPAAIAAAAnAAkAAAAOAAAAAAAnAAoAAAAPAAIAAAAnAAsAAAAPAAIAAAAnAA4AAAAPAAAAAAAnAA8AAAAPAAIAAAAnABAAAAAPAAIAAAAnABQAAAAPAAAAAAAnABUAAAAPAAIAAAAnABYAAAAPAAIAAAAnABkAAAAPAAAAAAAnABoAAAAPAAIAAAAnABsAAAAPAAIAAAAoAAkAAAAOAAAAAAAoAAoAAAAPAAIAAAAoAAsAAAAPAAIAAAAoAA4AAAAPAAAAAAAoAA8AAAAPAAIAAAAoABAAAAAPAAIAAAAoABQAAAAPAAAAAAAoABUAAAAPAAIAAAAoABYAAAAPAAIAAAAoABkAAAAPAAAAAAAoABoAAAAPAAIAAAAoABsAAAAPAAIAAAApAAkAAAAOAAAAAAApAAoAAAAPAAIAAAApAAsAAAAPAAIAAAApAA4AAAAPAAAAAAApAA8AAAAPAAIAAAApABAAAAAPAAIAAAApABQAAAAPAAAAAAApABUAAAAPAAIAAAApABYAAAAPAAIAAAApABkAAAAPAAAAAAApABoAAAAPAAIAAAApABsAAAAPAAIAAAAqAAkAAAAOAAAAAAAqAAoAAAAPAAEAAAAqAAsAAAAPAAEAAAAqAAwAAAAPAAEAAAAqAA0AAAAPAAEAAAAqAA4AAAAPAAEAAAAqAA8AAAAPAAIAAAAqABAAAAAPAAIAAAAqABQAAAAPAAAAAAAqABUAAAAPAAEAAAAqABYAAAAPAAEAAAAqABcAAAAPAAEAAAAqABgAAAAPAAEAAAAqABkAAAAPAAEAAAAqABoAAAAPAAIAAAAqABsAAAAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
 tile_set = SubResource("TileSet_bhunq")
 
-[node name="Decoration" type="TileMapLayer" parent="." index="4" unique_id=540210362]
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_3" index="0" unique_id=2046242256]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_3" index="1" unique_id=782366151]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_3" index="2" unique_id=1469370093]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_3/Kertas_1" index="0" unique_id=807288417]
+position = Vector2(65.06671, 39.466675)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_3" index="3" unique_id=1478152784]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="POT BUNGA" type="TileMapLayer" parent="Ruang_Karyawan_3" index="4" unique_id=856776875]
+position = Vector2(-7.199999, -3.199999)
+tile_map_data = PackedByteArray("AAAMAAoAAAAKAAYAAAAMAAsAAAAKAAcAAAANAAoAAAALAAYAAAANAAsAAAALAAcAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_3" index="5" unique_id=1491292058]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_3" index="6" unique_id=2011321491]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_3" index="7" unique_id=1518945978]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_3" index="8" unique_id=509767352]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Cermin" type="TileMapLayer" parent="Ruang_Karyawan_3" index="9" unique_id=1212106520]
+position = Vector2(44.800014, -42.40001)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAAKABIAAAACAAYAAAAKABMAAAACAAcAAAALABIAAAADAAYAAAALABMAAAADAAcAAAAKABQAAAAMAAAAAAAKABUAAAAMAAEAAAALABQAAAANAAAAAAALABUAAAANAAEAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Ruang_Karyawan_4" type="TileMapLayer" parent="." index="5" unique_id=606559032]
+position = Vector2(233.99998, -17.999994)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
+tile_set = SubResource("TileSet_bhunq")
+
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_4" index="0" unique_id=2110289262]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_4" index="1" unique_id=1011760200]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_4" index="2" unique_id=934156324]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_4/Kertas_1" index="0" unique_id=1810448665]
+position = Vector2(65.06674, 39.466682)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_4" index="3" unique_id=1911746373]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="POT BUNGA" type="TileMapLayer" parent="Ruang_Karyawan_4" index="4" unique_id=1360227923]
+position = Vector2(-7.199999, -3.199999)
+tile_map_data = PackedByteArray("AAAMAAoAAAAKAAYAAAAMAAsAAAAKAAcAAAANAAoAAAALAAYAAAANAAsAAAALAAcAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Kursi2" type="TileMapLayer" parent="Ruang_Karyawan_4" index="5" unique_id=69257208]
+position = Vector2(-10.39995, -3.1999989)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAIAAoAAAAKAAAAAAAIAAsAAAAKAAEAAAAJAAoAAAALAAAAAAAJAAsAAAALAAEAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_4" index="6" unique_id=589502979]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_4" index="7" unique_id=1915204984]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_4" index="8" unique_id=1397179969]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_4" index="9" unique_id=1067778831]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Ruang_Karyawan_5" type="TileMapLayer" parent="." index="6" unique_id=10973539]
+position = Vector2(457.99994, -17.999994)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
+tile_set = SubResource("TileSet_bhunq")
+
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_5" index="0" unique_id=374128548]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_5" index="1" unique_id=1193575579]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_5" index="2" unique_id=725153067]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_5/Kertas_1" index="0" unique_id=1386890687]
+position = Vector2(65.06665, 39.466682)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_5" index="3" unique_id=316970791]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="Buku" type="TileMapLayer" parent="Ruang_Karyawan_5" index="4" unique_id=683295534]
+position = Vector2(-3.2000122, 0.7999983)
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAYABUAAAACAAIAAAAYABYAAAACAAMAAAAZABUAAAADAAIAAAAZABYAAAADAAMAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Buku2" type="TileMapLayer" parent="Ruang_Karyawan_5/Buku" index="0" unique_id=745816286]
+position = Vector2(16.000122, 0)
+scale = Vector2(0.99999994, 0.99999994)
+tile_map_data = PackedByteArray("AAAYABUAAAACAAIAAAAYABYAAAACAAMAAAAZABUAAAADAAIAAAAZABYAAAADAAMAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_5" index="5" unique_id=1779277248]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_5" index="6" unique_id=578453998]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_5" index="7" unique_id=70845494]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_5" index="8" unique_id=934785060]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Ruang_Karyawan_6" type="TileMapLayer" parent="." index="7" unique_id=514067790]
+position = Vector2(457.99997, 213.99997)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAJAAsAAAAPAAEAAAAJAAwAAAAPAAEAAAAJAA0AAAAPAAIAAAAKAAsAAAAPAAIAAAALAAsAAAAPAAIAAAAMAAkAAAAOAAAAAAAMAAoAAAAPAAIAAAAMAAsAAAAPAAIAAAAJAAkAAAAOAAAAAAAJAAoAAAAPAAEAAAAJAA4AAAAPAAIAAAAKAAkAAAAOAAAAAAAKAAoAAAAPAAIAAAALAAkAAAAOAAAAAAALAAoAAAAPAAIAAAANAAkAAAAOAAAAAAANAAoAAAAPAAIAAAANAAsAAAAPAAIAAAAOAAkAAAAOAAAAAAAOAAoAAAAPAAIAAAAOAAsAAAAPAAIAAAAPAAkAAAAOAAAAAAAPAAoAAAAPAAIAAAAPAAsAAAAPAAIAAAAQAAkAAAAOAAAAAAAQAAoAAAAPAAEAAAAQAAsAAAAPAAEAAAAQAAwAAAAPAAEAAAAQAA0AAAAPAAEAAAANAA8AAAAPAAAAAAANABAAAAAPAAIAAAANABEAAAAPAAIAAAAOAA8AAAAPAAAAAAAOABAAAAAPAAIAAAAOABEAAAAPAAIAAAAPAA8AAAAPAAAAAAAPABAAAAAPAAIAAAAPABEAAAAPAAIAAAAQAA8AAAAPAAEAAAAQABAAAAAPAAIAAAAQABEAAAAPAAIAAAAQAA4AAAAPAAEAAAA=")
+tile_set = SubResource("TileSet_bhunq")
+
+[node name="KOMPUTER" type="TileMapLayer" parent="Ruang_Karyawan_6" index="0" unique_id=1586327212]
+scale = Vector2(1.3199999, 1.3199999)
+tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAAKAAkAAAACAAUAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kursi" type="TileMapLayer" parent="Ruang_Karyawan_6" index="1" unique_id=1055496517]
+position = Vector2(-195.19994, -187.20006)
+scale = Vector2(1.7499999, 1.7499999)
+tile_map_data = PackedByteArray("AAAOAA0AAAAKAAIAAAAOAA4AAAAKAAMAAAAPAA0AAAALAAIAAAAPAA4AAAALAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Kertas_1" type="TileMapLayer" parent="Ruang_Karyawan_6" index="2" unique_id=1668600286]
+position = Vector2(96.00002, 77.60004)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAcAAAACAAoAAAALAAgAAAACAAsAAAAMAAcAAAADAAoAAAAMAAgAAAADAAsAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="Kertas_2" type="TileMapLayer" parent="Ruang_Karyawan_6/Kertas_1" index="0" unique_id=1765057412]
+position = Vector2(65.06665, 39.466705)
+scale = Vector2(0.6666667, 0.6666667)
+tile_map_data = PackedByteArray("AAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAA=")
+tile_set = SubResource("TileSet_go5ld")
+
+[node name="LEMARI" type="TileMapLayer" parent="Ruang_Karyawan_6" index="3" unique_id=1073252574]
+position = Vector2(8.799999, -3.9999998)
+scale = Vector2(1.1999999, 1.1999999)
+tile_map_data = PackedByteArray("AAAKAAkAAAAHAAQAAAAKAAoAAAAHAAUAAAAJAAkAAAAGAAQAAAAJAAoAAAAGAAUAAAA=")
+tile_set = SubResource("TileSet_u0uho")
+
+[node name="POT BUNGA" type="TileMapLayer" parent="Ruang_Karyawan_6" index="4" unique_id=612385649]
+position = Vector2(-7.199999, -3.199999)
+tile_map_data = PackedByteArray("AAAMAAoAAAAKAAYAAAAMAAsAAAAKAAcAAAANAAoAAAALAAYAAAANAAsAAAALAAcAAAA=")
+tile_set = SubResource("TileSet_3xd07")
+
+[node name="Meja" type="TileMapLayer" parent="Ruang_Karyawan_6" index="5" unique_id=546775084]
+position = Vector2(-8.799999, 0)
+tile_map_data = PackedByteArray("AAAMAAsAAAABAAgAAAAMAAwAAAABAAkAAAALAAwAAAAAAAkAAAALAAsAAAAAAAgAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="printer" type="TileMapLayer" parent="Ruang_Karyawan_6" index="6" unique_id=1432373246]
+position = Vector2(39.200005, 43.999996)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAALAAsAAAAGAAYAAAALAAwAAAAGAAcAAAAMAAsAAAAHAAYAAAAMAAwAAAAHAAcAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Pembuang Kertas" type="TileMapLayer" parent="Ruang_Karyawan_6" index="7" unique_id=178261323]
+position = Vector2(35.999992, 47.199993)
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAAKAAsAAAAMAAAAAAAKAAwAAAAMAAEAAAALAAsAAAANAAAAAAALAAwAAAANAAEAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Pembuang Kertas2" type="TileMapLayer" parent="Ruang_Karyawan_6" index="8" unique_id=2110854845]
+position = Vector2(30.400024, 40)
+scale = Vector2(1.25, 1.25)
+tile_map_data = PackedByteArray("AAAGAAgAAAAKAAAAAAAGAAkAAAAKAAEAAAAHAAgAAAALAAAAAAAHAAkAAAALAAEAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Papan" type="TileMapLayer" parent="Ruang_Karyawan_6" index="9" unique_id=1993527964]
+position = Vector2(42.40002, -38.40001)
+scale = Vector2(1.75, 1.75)
+tile_map_data = PackedByteArray("AAAGAAoAAAAAAAIAAAAGAAsAAAAAAAMAAAAHAAoAAAABAAIAAAAHAAsAAAABAAMAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Jam" type="TileMapLayer" parent="Ruang_Karyawan_6" index="10" unique_id=431949672]
+position = Vector2(48.800014, -42.400005)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAALABIAAAAKAAgAAAALABMAAAAKAAkAAAAMABIAAAALAAgAAAAMABMAAAALAAkAAAA=")
+tile_set = SubResource("TileSet_jq8tk")
+
+[node name="Decoration" type="TileMapLayer" parent="." index="8" unique_id=540210362]
 scale = Vector2(1.65, 1.65)
 tile_set = SubResource("TileSet_76wly")
 
@@ -2129,33 +3403,30 @@ scale = Vector2(0.55, 0.55)
 tile_map_data = PackedByteArray("AABLABwAAQAZABIAAABLAB0AAQAZABMAAABLAB4AAQAZABQAAABLAB8AAQAZABUAAABLACAAAQAZABYAAABMABwAAQAaABIAAABMAB8AAQAaABUAAABNABwAAQAbABIAAABNAB8AAQAbABUAAABOABwAAQAcABIAAABOAB0AAQAcABMAAABOAB4AAQAcABQAAABOAB8AAQAcABUAAABOACAAAQAcABYAAAA=")
 tile_set = SubResource("TileSet_addqe")
 
-[node name="Decoration2" type="TileMapLayer" parent="." index="5" unique_id=343355797]
-scale = Vector2(1.65, 1.65)
-tile_map_data = PackedByteArray("AAAKAAgAAAACAAQAAAAKAAkAAAACAAUAAAALAAgAAAADAAQAAAALAAkAAAADAAUAAAA=")
-tile_set = SubResource("TileSet_go5ld")
-
-[node name="Decoration3" type="TileMapLayer" parent="." index="6" unique_id=1966017736]
-scale = Vector2(1.5, 1.5)
-tile_map_data = PackedByteArray("AAAKAAkAAAAGAAQAAAAKAAoAAAAGAAUAAAALAAkAAAAHAAQAAAALAAoAAAAHAAUAAAA=")
-tile_set = SubResource("TileSet_u0uho")
-
-[node name="Decoration4" type="TileMapLayer" parent="." index="7" unique_id=1325498372]
+[node name="Decoration4" type="TileMapLayer" parent="." index="9" unique_id=1325498372]
+visible = false
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_if402")
 
-[node name="Decoration5" type="TileMapLayer" parent="." index="8" unique_id=984086167]
+[node name="Decoration5" type="TileMapLayer" parent="." index="10" unique_id=984086167]
+visible = false
 
-[node name="Decoration6" type="TileMapLayer" parent="." index="9" unique_id=887943614]
+[node name="Decoration6" type="TileMapLayer" parent="." index="11" unique_id=887943614]
+visible = false
 
-[node name="Decoration7" type="TileMapLayer" parent="." index="10" unique_id=2047342453]
+[node name="Decoration7" type="TileMapLayer" parent="." index="12" unique_id=2047342453]
+visible = false
 
-[node name="Decoration8" type="TileMapLayer" parent="." index="11" unique_id=1844480539]
+[node name="Decoration8" type="TileMapLayer" parent="." index="13" unique_id=1844480539]
+visible = false
 
-[node name="Decoration9" type="TileMapLayer" parent="." index="12" unique_id=879001362]
+[node name="Decoration9" type="TileMapLayer" parent="." index="14" unique_id=879001362]
+visible = false
 
-[node name="Decoration10" type="TileMapLayer" parent="." index="13" unique_id=444397751]
+[node name="Decoration10" type="TileMapLayer" parent="." index="15" unique_id=444397751]
+visible = false
 
-[node name="Exit" type="Area2D" parent="." index="14" unique_id=2146475159]
+[node name="Exit" type="Area2D" parent="." index="16" unique_id=2146475159]
 position = Vector2(129, 81)
 scale = Vector2(1.65, 1.65)
 metadata/_edit_group_ = true
@@ -2164,10 +3435,10 @@ metadata/_edit_group_ = true
 position = Vector2(-2.2888184e-05, -2.121212)
 shape = SubResource("RectangleShape2D_mcfqe")
 
-[node name="Players" parent="." index="15" unique_id=1392093561]
+[node name="Players" parent="." index="17" unique_id=1392093561]
 position = Vector2(495, 278.00003)
 
-[node name="Wall_layer5" type="TileMapLayer" parent="." index="16" unique_id=1484006092]
+[node name="Wall_layer5" type="TileMapLayer" parent="." index="18" unique_id=1484006092]
 scale = Vector2(1.75, 1.75)
 tile_map_data = PackedByteArray("AAAnAA0AAAAPAAAAAAAmAA0AAAAPAAAAAAA=")
 tile_set = SubResource("TileSet_riqys")
