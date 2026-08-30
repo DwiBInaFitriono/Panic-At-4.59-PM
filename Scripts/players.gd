@@ -11,9 +11,7 @@ const FRICTION := 1000.0
 var last_dir: Vector2 = Vector2.DOWN
 
 
-func _physics_process(delta: float) -> void:
-	# Auto: WASD langsung digabung jadi satu vektor, sudah dinormalisasi
-	# otomatis (diagonal tidak lebih cepat) — tanpa nilai yang di-set manual.   
+func _physics_process(delta: float) -> void:  
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	var is_running := Input.is_action_pressed("sprint")
@@ -33,13 +31,11 @@ func _physics_process(delta: float) -> void:
 func _play_animation(state: String, dir: Vector2) -> void:
 	var anim_name := state + _get_direction_suffix(dir)
 
-	# Safety: cuma play kalau animasinya memang ada.
 	if anim.sprite_frames.has_animation(anim_name) and anim.animation != anim_name:
 		anim.play(anim_name)
 
 
 func _get_direction_suffix(dir: Vector2) -> String:
-	# Auto: ambil tanda (sign) tiap komponen vektor, bukan angka batas yang di-set.
 	var suffix := ""
 	if dir.y < 0.0:
 		suffix += "_up"
