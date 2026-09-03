@@ -916,7 +916,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3o0n"]
-size = Vector2(14.857145, 22.14286)
+size = Vector2(16.000011, 18.285727)
 
 [node name="Players" type="CharacterBody2D" unique_id=1392093561 groups=["player"]]
 scale = Vector2(1.75, 1.75)
@@ -927,8 +927,8 @@ sprite_frames = SubResource("SpriteFrames_bhunq")
 animation = &"Idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558800843 groups=["player"]]
-position = Vector2(1.7029894e-08, 5.3571386)
-scale = Vector2(0.9999995, 0.9999995)
+position = Vector2(2.3841855e-07, 6.8571415)
+scale = Vector2(0.9999993, 0.9999993)
 shape = SubResource("RectangleShape2D_x3o0n")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=780782000 groups=["player"]]

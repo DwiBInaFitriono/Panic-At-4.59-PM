@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx3ybupl8ygc1"
-path="res://.godot/imported/doorswindowsstairs_LRK.png-777c6b315ff3d11a09b85ea4fd35f659.ctex"
+uid="uid://cwqbi64cqpm8y"
+path="res://.godot/imported/nyoba.png-69a729be72474fa0e3a9708822bbe6b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Players/doorswindowsstairs_LRK.png"
-dest_files=["res://.godot/imported/doorswindowsstairs_LRK.png-777c6b315ff3d11a09b85ea4fd35f659.ctex"]
+source_file="res://Assets/UI/nyoba.png"
+dest_files=["res://.godot/imported/nyoba.png-69a729be72474fa0e3a9708822bbe6b9.ctex"]
 
 [params]
 

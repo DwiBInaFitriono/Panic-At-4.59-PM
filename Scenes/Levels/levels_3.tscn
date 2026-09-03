@@ -4,8 +4,8 @@
 
 [node name="Roots Levels" unique_id=405689122 instance=ExtResource("1_66h31")]
 
-[node name="Players" parent="." index="0" unique_id=1392093561]
+[node name="Players" parent="." index="1" unique_id=1392093561]
 position = Vector2(804.99994, 359)
 
-[node name="Bosses" parent="." index="1" unique_id=332418057]
+[node name="Bosses" parent="." index="2" unique_id=332418057]
 position = Vector2(106, 362)

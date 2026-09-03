@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal noise_emitted(pos: Vector2, loudness: float)
 
 const WALK_SPEED := 100.0
 const RUN_SPEED := 180.0
@@ -21,6 +22,8 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(direction * target_speed, ACCELERATION * delta)
 		last_dir = direction
 		_play_animation("Walk" if not is_running else "Run", direction)
+		if is_running:
+			noise_emitted.emit(global_position, 280.0)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		_play_animation("Idle", last_dir)

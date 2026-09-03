@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cube78d0khu5e"]
+
+[ext_resource type="PackedScene" uid="uid://cymuwl4rlfqf1" path="res://Scenes/players.tscn" id="1_87jve"]
+
+[node name="levels_balcony" type="Node2D" unique_id=578022269]
+
+[node name="Players" parent="." unique_id=1392093561 instance=ExtResource("1_87jve")]
+position = Vector2(571.99994, 300.99997)
