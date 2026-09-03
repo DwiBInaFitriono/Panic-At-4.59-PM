@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://u71i37k5xqj8"]
+
+[node name="Control" type="Control" unique_id=1987431375]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1874509742]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=205322567]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialoquePanel" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1631488128]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = 460.0
+offset_right = 1100.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/DialoquePanel" unique_id=199336439]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer" unique_id=1658602541]
+layout_mode = 2
+
+[node name="PlayerAvatarFrame" type="PanelContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=1814629522]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="AvatarTexture" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/PlayerAvatarFrame" unique_id=1225318551]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ContentVbox" type="VBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=1467056563]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameplateContainer\'" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=977476030]
+layout_mode = 2
+
+[node name="SpeakerNameLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer\'" unique_id=1722511133]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+
+[node name="SpeakerTitleLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer\'" unique_id=1174871635]
+layout_mode = 2
+
+[node name="DialoqueText" type="RichTextLabel" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=862000760]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+scroll_active = false
+context_menu_enabled = true
+
+[node name="footerHbox" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=867273952]
+layout_mode = 2
+
+[node name="controlHint" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/footerHbox" unique_id=1439815462]
+layout_mode = 2
+
+[node name="ContinueIndikator" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/footerHbox" unique_id=683430501]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="BossavatarFrame" type="PanelContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=273037172]
+layout_mode = 2
+
+[node name="AvatarTexture" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/BossavatarFrame" unique_id=873595536]
+layout_mode = 2
