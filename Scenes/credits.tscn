@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://b503cm2nq51dl"]
+
+[node name="Credits" type="Control" unique_id=1378542744]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2139746208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1832003144]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1143214199]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer" unique_id=863164215]
+custom_minimum_size = Vector2(1280, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Control" type="Control" parent="SubViewportContainer/VBoxContainer" unique_id=32300808]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=1417182299]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+[font_size=40][b][color=#e74c3c]PANIC AT 4:59 PM[/color][/b][/font_size]
+[font_size=18][i][color=#bdc3c7]\"Overtime is not an option!\"[/color][/i][/font_size]
+
+[font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
+
+[font_size=26][b][color=#f1c40f]DEVELOPMENT TEAM[/color][/b][/font_size]
+
+[font_size=20][b][color=#3498db]Lead Game Developer & Designer[/color][/b][/font_size]
+[font_size=18]Isi Nama Anda / Tim[/font_size]
+
+[font_size=20][b][color=#3498db]Gameplay Programmer[/color][/b][/font_size]
+[font_size=18]Isi Nama Programmer[/font_size]
+
+[font_size=20][b][color=#3498db]Level & Stealth Designer[/color][/b][/font_size]
+[font_size=18]Isi Nama Level Designer[/font_size]
+
+[font_size=20][b][color=#3498db]2D / 3D Artist & Animator[/color][/b][/font_size]
+[font_size=18]Isi Nama Artist[/font_size]
+[/center]
+"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=1134569244]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+[font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
+
+[font_size=26][b][color=#f1c40f]AUDIO & MUSIC[/color][/b][/font_size]
+
+[font_size=20][b][color=#3498db]Background Music (BGM)[/color][/b][/font_size]
+[font_size=18]\"Track Title\" by Artist / Composer[/font_size]
+[font_size=14][i][color=#95a5a6](<Licensed under Creative Commons BY 4.0>)[/color][/i][/font_size]
+
+[font_size=20][b][color=#3498db]Sound Effects (SFX)[/color][/b][/font_size]
+[font_size=18]Freesound.org Assets / Creator Name[/font_size]
+
+[font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
+
+[font_size=26][b][color=#f1c40f]THIRD-PARTY ASSETS & TOOLS[/color][/b][/font_size]
+
+[font_size=18][b]Game Engine[/b][/font_size]
+[font_size=16]Godot Engine 4.7 (Forward+ / Compatibility)[/font_size]
+
+[font_size=18][b]Physics Engine[/b][/font_size]
+[font_size=16]Jolt Physics[/font_size]
+
+[font_size=18][b]Graphics & Font Assets[/b][/font_size]
+[font_size=16]Font Name by Creator Name[/font_size]
+[/center]
+"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=227882072]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+[font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
+
+[font_size=26][b][color=#f1c40f]SPECIAL THANKS[/color][/b][/font_size]
+
+[font_size=18]Godot Engine Community[/font_size]
+[font_size=18]Our Playtesters & Friends[/font_size]
+[font_size=18]And YOU for Playing![/font_size]
+
+[font_size=20]☕[/font_size]
+[font_size=14][i][color=#bdc3c7]Escaped the office right on time![/color][/i][/font_size]
+
+[font_size=12][color=#7f8c8d]© 2026 All Rights Reserved.[/color][/font_size]
+[/center]
+"
+fit_content = true
+
+[node name="Control2" type="Control" parent="SubViewportContainer/VBoxContainer" unique_id=1410246748]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1298934826]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1720089383]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1725789215]
+layout_mode = 2
