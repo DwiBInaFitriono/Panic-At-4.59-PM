@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Panic At 4.59 PM"
-run/main_scene="uid://dsis8yyifsf51"
+run/main_scene="uid://crwa0e1xlh780"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

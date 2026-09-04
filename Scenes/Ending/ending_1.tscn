@@ -1780,7 +1780,7 @@ tile_map_data = PackedByteArray("AAAVABAAAAAEABgAAAAVABEAAAAEABkAAAAWABAAAAAFABg
 tile_set = SubResource("TileSet_sn0t7")
 
 [node name="Players" parent="." unique_id=1392093561 instance=ExtResource("3_vmupk")]
-position = Vector2(631, 583)
+position = Vector2(248.00009, 242.00003)
 
 [node name="Walls 2" type="TileMapLayer" parent="." unique_id=575448773]
 scale = Vector2(1.75, 1.75)

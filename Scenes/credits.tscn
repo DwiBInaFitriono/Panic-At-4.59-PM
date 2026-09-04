@@ -1,37 +1,36 @@
 [gd_scene format=3 uid="uid://b503cm2nq51dl"]
 
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_cred"]
+
 [node name="Credits" type="Control" unique_id=1378542744]
+script = ExtResource("1_cred")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+clip_contents = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2139746208]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2139746208]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.05, 0.05, 0.08, 1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1832003144]
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1143214199]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=863164215]
+custom_minimum_size = Vector2(1280, 0)
 layout_mode = 0
+offset_left = 0.0
+offset_top = 720.0
 offset_right = 1280.0
 offset_bottom = 720.0
+theme_override_constants/separation = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer" unique_id=863164215]
-custom_minimum_size = Vector2(1280, 0)
-layout_mode = 2
-alignment = 1
-
-[node name="Control" type="Control" parent="SubViewportContainer/VBoxContainer" unique_id=32300808]
-layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=1417182299]
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1417182299]
 layout_mode = 2
 bbcode_enabled = true
 text = "[center]
@@ -58,10 +57,6 @@ text = "[center]
 "
 fit_content = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=1134569244]
-layout_mode = 2
-bbcode_enabled = true
-text = "[center]
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
 [font_size=26][b][color=#f1c40f]AUDIO & MUSIK[/color][/b][/font_size]
@@ -93,10 +88,6 @@ text = "[center]
 "
 fit_content = true
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="SubViewportContainer/VBoxContainer" unique_id=227882072]
-layout_mode = 2
-bbcode_enabled = true
-text = "[center]
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
 [font_size=26][b][color=#f1c40f]SPECIAL THANKS[/color][/b][/font_size]
@@ -109,15 +100,21 @@ text = "[center]
 [/center]
 "
 fit_content = true
-
-[node name="Control2" type="Control" parent="SubViewportContainer/VBoxContainer" unique_id=1410246748]
-layout_mode = 2
+autowrap_mode = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1298934826]
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1720089383]
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1725789215]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8

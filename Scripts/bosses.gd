@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 enum State { PATROL, SUSPICIOUS, INVESTIGATING, CHASE }
 
-# Parameter Kesulitan Dinamis (Diatur otomatis berdasarkan Level 1, 2, atau 3)
 @export var can_run: bool = true
 @export var chase_speed: float = 205.0
 @export var chase_speed_walk_only: float = 105.0
@@ -10,10 +9,10 @@ enum State { PATROL, SUSPICIOUS, INVESTIGATING, CHASE }
 @export var suspicious_speed: float = 110.0
 
 @export var vision_range: float = 220.0
-@export var cone_angle: float = 45.0 # Sudut ke kiri & kanan dari arah hadap (total kerucut = cone_angle * 2)
-@export var alert_buildup_speed: float = 1.5 # Kecepatan alert terisi (detik ke 100%)
-@export var alert_decay_speed: float = 0.5   # Kecepatan alert berkurang saat aman
-@export var hearing_range: float = 280.0     # Jarak pendengaran langkah lari pemain
+@export var cone_angle: float = 45.0
+@export var alert_buildup_speed: float = 1.5
+@export var alert_decay_speed: float = 0.5
+@export var hearing_range: float = 280.0
 
 @export var lose_sight_range: float = 420.0
 @export var lose_sight_time: float = 1.5
@@ -32,7 +31,7 @@ var DEBUG := OS.is_debug_build()
 @onready var obstacle_ray: RayCast2D = get_node_or_null("ObstacleRay")
 
 var state: State = State.PATROL
-var alert_level: float = 0.0 # 0.00 hingga 1.00 (0% - 100%)
+var alert_level: float = 0.0
 var alert_label: Label = null
 
 var last_dir: Vector2 = Vector2.DOWN
@@ -48,6 +47,11 @@ var _investigate_pos: Vector2 = Vector2.ZERO
 var _investigate_timer: float = 0.0
 var _connected_player: Node2D = null
 
+var noise_alert_min: float = 0.4
+var lost_sight_investigate_time: float = 2.5
+var lost_sight_alert_level: float = 0.4
+
+# Menampilkan pesan debug di konsol jika dalam mode pengujian
 func _debug_log(msg: String) -> void:
 	if not DEBUG:
 		return
@@ -57,12 +61,11 @@ func _debug_log(msg: String) -> void:
 	_last_debug_ms = now
 	print(msg)
 
+# Inisialisasi awal boss, animasi, navigasi, dan tingkat kesulitan
 func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	_check_animations()
 	_setup_alert_label()
-
-	# Terapkan tingkat kesulitan berdasarkan level saat ini
 	_apply_difficulty_by_level()
 
 	nav_agent.path_desired_distance = 8.0
@@ -79,40 +82,45 @@ func _ready() -> void:
 
 	_pick_roam_target()
 
+# Mengambil nomor level yang sedang aktif
 func _get_current_level_number() -> int:
 	var main_node = get_tree().root.get_node_or_null("Main")
 	if main_node and "level" in main_node:
 		return main_node.level
 
-	var scene_path := ""
-	if owner and owner.scene_file_path != "":
-		scene_path = owner.scene_file_path
-	elif get_tree().current_scene:
-		scene_path = get_tree().current_scene.scene_file_path
+	var cur: Node = self
+	while cur:
+		if cur.scene_file_path != "":
+			if "levels_3" in cur.scene_file_path:
+				return 3
+			elif "levels_2" in cur.scene_file_path:
+				return 2
+			elif "levels_1" in cur.scene_file_path:
+				return 1
+		cur = cur.get_parent()
 
-	if "levels_1" in scene_path:
-		return 1
-	elif "levels_2" in scene_path:
-		return 2
-	elif "levels_3" in scene_path:
-		return 3
+	if get_tree().current_scene:
+		var sp := get_tree().current_scene.scene_file_path
+		if "levels_3" in sp:
+			return 3
+		elif "levels_2" in sp:
+			return 2
+		elif "levels_1" in sp:
+			return 1
 
 	return 1
 
+# Menyesuaikan statistik kecepatan, jarak pandang, dan kepekaan boss per level
 func _apply_difficulty_by_level() -> void:
 	var lvl := _get_current_level_number()
 	_debug_log("[BOSS] Menyetel statistik Boss untuk Level %d" % lvl)
 
 	match lvl:
 		1:
-			# LEVEL 1: Mudah / Pengenalan
-			# - Boss HANYA BISA JALAN (tidak bisa lari)
-			# - Jarak pandang pendek (175px) & sudut pandang sempit (35 derajat)
-			# - Alert naik lambat & cepat lupa saat pemain sembunyi
 			can_run = false
-			chase_speed_walk_only = 100.0
-			roam_speed = 70.0
-			suspicious_speed = 90.0
+			chase_speed_walk_only = 90.0
+			roam_speed = 65.0
+			suspicious_speed = 85.0
 			vision_range = 175.0
 			cone_angle = 35.0
 			alert_buildup_speed = 1.0
@@ -122,46 +130,47 @@ func _apply_difficulty_by_level() -> void:
 			hearing_range = 200.0
 			roam_pause_min = 1.5
 			roam_pause_max = 3.5
+			noise_alert_min = 0.4
+			lost_sight_investigate_time = 2.0
+			lost_sight_alert_level = 0.35
 
 		2:
-			# LEVEL 2: Menengah / Tantangan Nyata
-			# - Boss BISA LARI saat mengejar (195px/s > lari pemain 180px/s)
-			# - Jarak pandang normal (240px) & kerucut pandang standar (45 derajat)
-			# - Lebih peka terhadap suara lari (hearing range 300px)
 			can_run = true
 			chase_speed = 195.0
-			roam_speed = 85.0
-			suspicious_speed = 115.0
-			vision_range = 240.0
-			cone_angle = 45.0
-			alert_buildup_speed = 1.8
-			alert_decay_speed = 0.5
-			lose_sight_time = 2.0
-			lose_sight_range = 420.0
-			hearing_range = 300.0
-			roam_pause_min = 1.0
-			roam_pause_max = 2.5
-
-		3, _:
-			# LEVEL 3: Sulit / Panic Maksimal
-			# - Boss LARI SANGAT CEPAT (220px/s)
-			# - Jarak pandang jauh (300px) & sudut pandang lebar (55 derajat)
-			# - Alert naik sangat cepat & lama curiga (sulit melarikan diri)
-			# - Jarang berhenti istirahat (selalu aktif berpatroli)
-			can_run = true
-			chase_speed = 220.0
-			roam_speed = 95.0
-			suspicious_speed = 135.0
-			vision_range = 300.0
-			cone_angle = 55.0
+			roam_speed = 90.0
+			suspicious_speed = 130.0
+			vision_range = 280.0
+			cone_angle = 50.0
 			alert_buildup_speed = 2.6
 			alert_decay_speed = 0.3
-			lose_sight_time = 2.8
-			lose_sight_range = 500.0
-			hearing_range = 380.0
-			roam_pause_min = 0.5
-			roam_pause_max = 1.5
+			lose_sight_time = 2.5
+			lose_sight_range = 480.0
+			hearing_range = 340.0
+			roam_pause_min = 0.4
+			roam_pause_max = 1.2
+			noise_alert_min = 0.6
+			lost_sight_investigate_time = 3.0
+			lost_sight_alert_level = 0.55
 
+		3, _:
+			can_run = true
+			chase_speed = 220.0
+			roam_speed = 105.0
+			suspicious_speed = 160.0
+			vision_range = 350.0
+			cone_angle = 60.0
+			alert_buildup_speed = 4.0
+			alert_decay_speed = 0.15
+			lose_sight_time = 3.5
+			lose_sight_range = 600.0
+			hearing_range = 440.0
+			roam_pause_min = 0.1
+			roam_pause_max = 0.5
+			noise_alert_min = 0.8
+			lost_sight_investigate_time = 4.0
+			lost_sight_alert_level = 0.70
+
+# Menyiapkan label indikator alert di atas kepala boss
 func _setup_alert_label() -> void:
 	alert_label = get_node_or_null("AlertLabel") as Label
 	if alert_label == null:
@@ -175,29 +184,31 @@ func _setup_alert_label() -> void:
 		alert_label.add_theme_font_size_override("font_size", 20)
 		add_child(alert_label)
 
+# Menghubungkan sinyal suara lari pemain ke boss
 func _check_player_noise_connection(player: Node2D) -> void:
 	if player != null and player != _connected_player:
 		_connected_player = player
 		if player.has_signal("noise_emitted") and not player.is_connected("noise_emitted", _on_player_noise):
 			player.connect("noise_emitted", _on_player_noise)
 
+# Merespons suara langkah lari pemain dalam jangkauan dengar boss
 func _on_player_noise(pos: Vector2, loudness: float) -> void:
 	if state == State.PATROL or state == State.SUSPICIOUS:
 		var dist := global_position.distance_to(pos)
 		var effective_range := maxf(loudness, hearing_range)
 		if dist <= effective_range:
 			_investigate_pos = pos
-			alert_level = maxf(alert_level, 0.4)
+			alert_level = maxf(alert_level, noise_alert_min)
 			state = State.SUSPICIOUS
 			_debug_log("[BOSS] Mendengar suara di (" + str(int(pos.x)) + ", " + str(int(pos.y)) + ")!")
 
+# Siklus utama logika AI: deteksi pandangan, tingkat kewaspadaan, dan pergerakan
 func _physics_process(delta: float) -> void:
 	var player := _get_player()
 	_check_player_noise_connection(player)
 
 	var can_see := player != null and _can_see_player(player)
 
-	# 1. Update Alert Level berdasarkan pandangan
 	if can_see and player != null:
 		var dist := global_position.distance_to(player.global_position)
 		var distance_factor := clampf(1.0 - (dist / vision_range), 0.25, 1.0)
@@ -210,7 +221,6 @@ func _physics_process(delta: float) -> void:
 		if state != State.CHASE or _lose_sight_timer <= 0.0:
 			alert_level = maxf(0.0, alert_level - delta * alert_decay_speed)
 
-	# 2. State Machine Logic
 	match state:
 		State.PATROL:
 			if alert_level >= 1.0:
@@ -245,8 +255,8 @@ func _physics_process(delta: float) -> void:
 			var give_up := player == null or _lose_sight_timer <= 0.0
 			if give_up:
 				state = State.INVESTIGATING
-				_investigate_timer = 2.5
-				alert_level = 0.4
+				_investigate_timer = lost_sight_investigate_time
+				alert_level = lost_sight_alert_level
 				_debug_log("[BOSS] Kehilangan jejak player! Menyelidiki lokasi terakhir...")
 			else:
 				_chase(player)
@@ -257,12 +267,14 @@ func _physics_process(delta: float) -> void:
 	_update_alert_ui()
 	_play_animation()
 
+# Mengaktifkan mode pengejaran penuh saat tingkat kewaspadaan mencapai maksimal
 func _enter_chase() -> void:
 	state = State.CHASE
 	is_chasing = true
 	_roam_paused = false
 	_debug_log("[BOSS] >>> ALERT 100%! MULAI NGEJAR! <<<")
 
+# Menggerakkan boss menuju titik koordinat tertentu dengan navigasi
 func _move_towards_pos(target_pos: Vector2, speed: float, delta: float) -> void:
 	nav_agent.target_position = target_pos
 
@@ -281,6 +293,7 @@ func _move_towards_pos(target_pos: Vector2, speed: float, delta: float) -> void:
 
 	_update_stuck_check(delta)
 
+# Memperbarui ikon status (? / ?? / !) di atas kepala boss
 func _update_alert_ui() -> void:
 	if alert_label == null:
 		return
@@ -293,10 +306,11 @@ func _update_alert_ui() -> void:
 	elif state == State.INVESTIGATING:
 		alert_label.text = "??"
 		alert_label.add_theme_color_override("font_color", Color.ORANGE)
-	else: # SUSPICIOUS
+	else:
 		alert_label.text = "?"
 		alert_label.add_theme_color_override("font_color", Color.YELLOW)
 
+# Memeriksa kelengkapan nama animasi boss di SpriteFrames
 func _check_animations() -> void:
 	if anim == null or anim.sprite_frames == null:
 		print("!! AnimatedSprite2D / SpriteFrames gak ketemu!")
@@ -314,9 +328,11 @@ func _check_animations() -> void:
 	else:
 		print("Animasi yang gak ada (", missing.size(), "): ", missing)
 
+# Mengembalikan daftar suffix arah untuk nama animasi
 func _all_suffixes() -> Array:
 	return ["_L", "_R", "_up", "_down", "_up_L", "_up_R", "_down_L", "_down_R"]
 
+# Memainkan animasi boss sesuai kecepatan gerak dan arah hadap
 func _play_animation() -> void:
 	if anim == null or anim.sprite_frames == null:
 		return
@@ -341,6 +357,7 @@ func _play_animation() -> void:
 		if anim.animation != anim_name or not anim.is_playing():
 			anim.play(anim_name)
 
+# Mengonversi vektor arah menjadi suffix teks nama animasi
 func _get_dir_suffix(dir: Vector2) -> String:
 	var y := ""
 	var x := ""
@@ -357,6 +374,7 @@ func _get_dir_suffix(dir: Vector2) -> String:
 		return "_" + y
 	return "_down"
 
+# Mengambil referensi node pemain dari grup player
 func _get_player() -> Node2D:
 	for group in ["player", "players", "Player"]:
 		var nodes := get_tree().get_nodes_in_group(group)
@@ -364,6 +382,7 @@ func _get_player() -> Node2D:
 			return nodes[0] as Node2D
 	return null
 
+# Memeriksa apakah pemain berada di jarak, sudut pandang, dan tanpa halangan dinding
 func _can_see_player(player: Node2D) -> bool:
 	var to_player := player.global_position - global_position
 	var dist := to_player.length()
@@ -395,6 +414,7 @@ func _can_see_player(player: Node2D) -> bool:
 
 	return true
 
+# Mengatur pergerakan patroli acak boss
 func _roam(delta: float) -> void:
 	if _roam_paused:
 		velocity = Vector2.ZERO
@@ -427,6 +447,7 @@ func _roam(delta: float) -> void:
 
 	_update_stuck_check(delta)
 
+# Mendeteksi apakah ada tabrakan/dinding di depan arah hadap
 func _is_obstacle_ahead(dir: Vector2) -> bool:
 	if obstacle_ray == null or dir == Vector2.ZERO:
 		return false
@@ -439,6 +460,7 @@ func _is_obstacle_ahead(dir: Vector2) -> bool:
 		return false
 	return true
 
+# Memeriksa apakah boss tersangkut di dinding dan mereset tujuan jika macet
 func _update_stuck_check(delta: float) -> void:
 	_stuck_timer += delta
 	if _stuck_timer < STUCK_CHECK_TIME:
@@ -453,11 +475,13 @@ func _update_stuck_check(delta: float) -> void:
 		velocity = Vector2.ZERO
 		_pause_then_roam()
 
+# Mereset penghitung waktu pengecekan tersangkut
 func _reset_stuck_tracker() -> void:
 	_stuck_timer = 0.0
 	_stuck_check_pos = global_position
 	_obstacle_timer = 0.0
 
+# Menghentikan gerakan boss sesaat sebelum mencari titik patroli berikutnya
 func _pause_then_roam() -> void:
 	if _roam_paused:
 		return
@@ -467,6 +491,7 @@ func _pause_then_roam() -> void:
 	if state == State.PATROL:
 		_pick_roam_target()
 
+# Memilih titik tujuan patroli acak pada area navigasi
 func _pick_roam_target() -> void:
 	if NavigationServer2D.has_method("map_get_random_point"):
 		var p: Vector2 = NavigationServer2D.map_get_random_point(
@@ -482,6 +507,7 @@ func _pick_roam_target() -> void:
 		var offset := Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * 300.0
 		nav_agent.target_position = global_position + offset
 
+# Menggerakkan boss mengejar posisi pemain
 func _chase(player: Node2D) -> void:
 	nav_agent.target_position = player.global_position
 

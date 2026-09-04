@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://r6oc4h4frj7u"]
+
+[ext_resource type="Script" path="res://Scripts/card_scan_minigame.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cwqbi64cqpm8y" path="res://Assets/UI/scan card.png" id="1_piwhr"]
+[ext_resource type="Texture2D" uid="uid://dm55r2b0saaab" path="res://Assets/UI/key card.png" id="2_dm55r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_window"]
+bg_color = Color(0.1, 0.11, 0.15, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.3, 0.36, 0.48, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+bg_color = Color(0.18, 0.22, 0.3, 1)
+border_width_bottom = 3
+border_color = Color(0.06, 0.07, 0.1, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_close_btn"]
+bg_color = Color(0.78, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.08, 0.08, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scanner_bg"]
+bg_color = Color(0.06, 0.07, 0.1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.24, 0.33, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_status_panel"]
+bg_color = Color(0.06, 0.07, 0.1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.24, 0.33, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="CardScanMinigame" type="CanvasLayer" unique_id=1081368448]
+script = ExtResource("1_script")
+layer = 50
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=686507381]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="CardWindow" type="Panel" parent="." unique_id=1369871614]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -260.0
+offset_right = 340.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_window")
+
+[node name="HeaderBar" type="Panel" parent="CardWindow" unique_id=1039482711]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_header")
+
+[node name="TitleLabel" type="Label" parent="CardWindow/HeaderBar" unique_id=1928374650]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = -11.0
+offset_right = 350.0
+offset_bottom = 11.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "> TERMINAL AKSES // PINTU_KELUAR"
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="CardWindow/HeaderBar" unique_id=1803026545]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -12.0
+offset_right = -6.0
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_close_btn")
+text = "X"
+
+[node name="ScannerFrame" type="Panel" parent="CardWindow" unique_id=1892837411]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.0
+offset_top = 48.0
+offset_right = 106.0
+offset_bottom = 260.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_scanner_bg")
+
+[node name="ScannerTarget" type="TextureRect" parent="CardWindow/ScannerFrame" unique_id=2020531976]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_piwhr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LaserLine" type="ColorRect" parent="CardWindow/ScannerFrame/ScannerTarget" unique_id=533537012]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+color = Color(0.2, 1, 0.4, 1)
+
+[node name="KeyCard" type="TextureRect" parent="CardWindow" unique_id=1189659743]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -245.0
+offset_right = 200.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 0
+texture = ExtResource("2_dm55r")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusPanel" type="Panel" parent="CardWindow" unique_id=1982736451]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -38.0
+offset_right = -12.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_status_panel")
+
+[node name="StatusLabel" type="Label" parent="CardWindow/StatusPanel" unique_id=1563507042]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2, 0.95, 0.5, 1)
+theme_override_font_sizes/font_size = 13
+text = "> TARIK KARTU KE KOTAK SENSOR SCANNER [ESC unutuk Batal]"
+horizontal_alignment = 1
+vertical_alignment = 1
