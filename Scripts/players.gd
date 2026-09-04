@@ -11,7 +11,6 @@ const FRICTION := 1000.0
 
 var last_dir: Vector2 = Vector2.DOWN
 
-# Mengatur pergerakan pemain, akselerasi, sprint, dan pemancaran suara langkah
 func _physics_process(delta: float) -> void:  
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
@@ -30,14 +29,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# Memainkan animasi karakter berdasarkan status aksi dan arah hadap
 func _play_animation(state: String, dir: Vector2) -> void:
 	var anim_name := state + _get_direction_suffix(dir)
 
 	if anim.sprite_frames.has_animation(anim_name) and anim.animation != anim_name:
 		anim.play(anim_name)
 
-# Mengonversi vektor arah menjadi teks akhiran nama animasi
 func _get_direction_suffix(dir: Vector2) -> String:
 	var suffix := ""
 	if dir.y < 0.0:

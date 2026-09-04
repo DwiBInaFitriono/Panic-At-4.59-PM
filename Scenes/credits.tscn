@@ -53,10 +53,6 @@ text = "[center]
 
 [font_size=20][b][color=#3498db]2D Artist & Animator[/color][/b][/font_size]
 [font_size=18]Bagas Bara Bandan Argopuro[/font_size]
-[/center]
-"
-fit_content = true
-
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
 [font_size=26][b][color=#f1c40f]AUDIO & MUSIK[/color][/b][/font_size]
@@ -84,9 +80,6 @@ fit_content = true
 [font_size=16]Character Templates Pack by erisesra[/font_size]
 [font_size=16]Pixel Life: Office Essentials by christianperich[/font_size]
 [font_size=16]Furniture Office Set by stcrbcn[/font_size]
-[/center]
-"
-fit_content = true
 
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
@@ -95,7 +88,6 @@ fit_content = true
 [font_size=18]Godot Engine Community[/font_size]
 [font_size=18]Beta Tester kami & Teman Kami[/font_size]
 [font_size=18]Dan Terimakasih Telah Bermain;D[/font_size]
-
 
 [/center]
 "

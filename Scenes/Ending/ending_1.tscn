@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ck1ucpcgoti0l" path="res://Assets/Interiors.png" id="1_vmupk"]
 [ext_resource type="Texture2D" uid="uid://voj3sx5ih8nj" path="res://Assets/Doors Windows Stairs LRK.png" id="2_1jee5"]
 [ext_resource type="PackedScene" uid="uid://cymuwl4rlfqf1" path="res://Scenes/players.tscn" id="3_vmupk"]
+[ext_resource type="Script" path="res://Scripts/ending_1.gd" id="4_end1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mpyn4"]
 texture = ExtResource("1_vmupk")
@@ -1737,6 +1738,7 @@ texture = ExtResource("2_1jee5")
 sources/0 = SubResource("TileSetAtlasSource_7snj3")
 
 [node name="Ending 1" type="Node2D" unique_id=572746416]
+script = ExtResource("4_end1")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=155579837]
 position = Vector2(19.999998, 0)

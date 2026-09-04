@@ -3,7 +3,7 @@ extends CanvasLayer
 signal scan_completed
 signal scan_canceled
 
-const SCAN_DURATION := 10.0
+const SCAN_DURATION := 5.0
 
 @onready var card_window: Panel = $CardWindow
 @onready var close_button: Button = $CardWindow/HeaderBar/CloseButton
@@ -19,7 +19,6 @@ var is_scanning: bool = false
 var is_completed: bool = false
 var drag_offset: Vector2 = Vector2.ZERO
 
-# Inisialisasi posisi awal kartu, tombol keluar, dan laser scanner
 func _ready() -> void:
 	await get_tree().process_frame
 	home_global_position = key_card.global_position
@@ -31,7 +30,6 @@ func _ready() -> void:
 	key_card.gui_input.connect(_on_key_card_gui_input)
 	close_button.pressed.connect(_on_close_button_pressed)
 
-# Menangani input mouse saat menyeret kartu dan tombol pembatalan
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		_cancel_minigame()
@@ -47,7 +45,6 @@ func _input(event: InputEvent) -> void:
 	elif event is InputEventMouseMotion:
 		key_card.global_position = get_viewport().get_mouse_position() + drag_offset
 
-# Menerima klik awal pada kartu untuk memulai proses penyeretan
 func _on_key_card_gui_input(event: InputEvent) -> void:
 	if is_scanning or is_completed:
 		return
@@ -59,7 +56,6 @@ func _on_key_card_gui_input(event: InputEvent) -> void:
 		drag_offset = key_card.global_position - get_viewport().get_mouse_position()
 		key_card.modulate = Color(1.15, 1.15, 1.15)
 
-# Memvalidasi posisi kartu saat dilepas apakah tepat berada di area sensor
 func _check_card_drop() -> void:
 	var scanner_rect := scanner_target.get_global_rect()
 	var card_rect := key_card.get_global_rect()
@@ -72,7 +68,6 @@ func _check_card_drop() -> void:
 	else:
 		_reset_card_position()
 
-# Menjalankan proses pemindaian kartu dan animasi laser scanner
 func _start_scan() -> void:
 	is_scanning = true
 	var target_global_pos := scanner_target.global_position + (scanner_target.size - key_card.size) * 0.5
@@ -118,7 +113,6 @@ func _start_scan() -> void:
 	await close_tween.finished
 	queue_free()
 
-# Mengembalikan kartu ke posisi awal jika penempatan di luar area sensor
 func _reset_card_position() -> void:
 	status_label.text = "> POSISI TIDAK TEPAT // COBA LAGI"
 	status_label.add_theme_color_override("font_color", Color(0.95, 0.35, 0.35, 1.0))
@@ -132,13 +126,11 @@ func _reset_card_position() -> void:
 		status_label.text = "> TARIK KARTU KE KOTAK SENSOR SCANNER [ESC untuk Batal]"
 		status_label.add_theme_color_override("font_color", Color(0.20, 0.95, 0.50, 1.0))
 
-# Membatalkan minigame dan menutup jendela terminal
 func _cancel_minigame() -> void:
 	if is_completed:
 		return
 	scan_canceled.emit()
 	queue_free()
 
-# Menangani aksi saat tombol close [X] ditekan
 func _on_close_button_pressed() -> void:
 	_cancel_minigame()

@@ -12,7 +12,7 @@ enum State { PATROL, SUSPICIOUS, INVESTIGATING, CHASE }
 @export var cone_angle: float = 45.0
 @export var alert_buildup_speed: float = 1.5
 @export var alert_decay_speed: float = 0.5
-@export var hearing_range: float = 280.0
+@export var hearing_range: float = 200.0
 
 @export var lose_sight_range: float = 420.0
 @export var lose_sight_time: float = 1.5
@@ -50,8 +50,11 @@ var _connected_player: Node2D = null
 var noise_alert_min: float = 0.4
 var lost_sight_investigate_time: float = 2.5
 var lost_sight_alert_level: float = 0.4
+var is_roam_running: bool = false
+var roam_run_speed: float = 140.0
+var roam_run_chance: float = 0.0
+var _is_catching_player: bool = false
 
-# Menampilkan pesan debug di konsol jika dalam mode pengujian
 func _debug_log(msg: String) -> void:
 	if not DEBUG:
 		return
@@ -61,7 +64,6 @@ func _debug_log(msg: String) -> void:
 	_last_debug_ms = now
 	print(msg)
 
-# Inisialisasi awal boss, animasi, navigasi, dan tingkat kesulitan
 func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	_check_animations()
@@ -82,7 +84,6 @@ func _ready() -> void:
 
 	_pick_roam_target()
 
-# Mengambil nomor level yang sedang aktif
 func _get_current_level_number() -> int:
 	var main_node = get_tree().root.get_node_or_null("Main")
 	if main_node and "level" in main_node:
@@ -110,7 +111,6 @@ func _get_current_level_number() -> int:
 
 	return 1
 
-# Menyesuaikan statistik kecepatan, jarak pandang, dan kepekaan boss per level
 func _apply_difficulty_by_level() -> void:
 	var lvl := _get_current_level_number()
 	_debug_log("[BOSS] Menyetel statistik Boss untuk Level %d" % lvl)
@@ -127,12 +127,14 @@ func _apply_difficulty_by_level() -> void:
 			alert_decay_speed = 0.8
 			lose_sight_time = 1.2
 			lose_sight_range = 340.0
-			hearing_range = 200.0
+			hearing_range = 160.0
 			roam_pause_min = 1.5
 			roam_pause_max = 3.5
-			noise_alert_min = 0.4
+			noise_alert_min = 0.35
 			lost_sight_investigate_time = 2.0
 			lost_sight_alert_level = 0.35
+			roam_run_speed = 65.0
+			roam_run_chance = 0.0
 
 		2:
 			can_run = true
@@ -145,12 +147,14 @@ func _apply_difficulty_by_level() -> void:
 			alert_decay_speed = 0.3
 			lose_sight_time = 2.5
 			lose_sight_range = 480.0
-			hearing_range = 340.0
+			hearing_range = 190.0
 			roam_pause_min = 0.4
 			roam_pause_max = 1.2
-			noise_alert_min = 0.6
+			noise_alert_min = 0.45
 			lost_sight_investigate_time = 3.0
 			lost_sight_alert_level = 0.55
+			roam_run_speed = 155.0
+			roam_run_chance = 0.45
 
 		3, _:
 			can_run = true
@@ -163,14 +167,15 @@ func _apply_difficulty_by_level() -> void:
 			alert_decay_speed = 0.15
 			lose_sight_time = 3.5
 			lose_sight_range = 600.0
-			hearing_range = 440.0
+			hearing_range = 230.0
 			roam_pause_min = 0.1
 			roam_pause_max = 0.5
-			noise_alert_min = 0.8
+			noise_alert_min = 0.50
 			lost_sight_investigate_time = 4.0
 			lost_sight_alert_level = 0.70
+			roam_run_speed = 185.0
+			roam_run_chance = 0.70
 
-# Menyiapkan label indikator alert di atas kepala boss
 func _setup_alert_label() -> void:
 	alert_label = get_node_or_null("AlertLabel") as Label
 	if alert_label == null:
@@ -184,25 +189,22 @@ func _setup_alert_label() -> void:
 		alert_label.add_theme_font_size_override("font_size", 20)
 		add_child(alert_label)
 
-# Menghubungkan sinyal suara lari pemain ke boss
 func _check_player_noise_connection(player: Node2D) -> void:
 	if player != null and player != _connected_player:
 		_connected_player = player
 		if player.has_signal("noise_emitted") and not player.is_connected("noise_emitted", _on_player_noise):
 			player.connect("noise_emitted", _on_player_noise)
 
-# Merespons suara langkah lari pemain dalam jangkauan dengar boss
 func _on_player_noise(pos: Vector2, loudness: float) -> void:
 	if state == State.PATROL or state == State.SUSPICIOUS:
 		var dist := global_position.distance_to(pos)
-		var effective_range := maxf(loudness, hearing_range)
+		var effective_range := minf(loudness, hearing_range)
 		if dist <= effective_range:
 			_investigate_pos = pos
 			alert_level = maxf(alert_level, noise_alert_min)
 			state = State.SUSPICIOUS
 			_debug_log("[BOSS] Mendengar suara di (" + str(int(pos.x)) + ", " + str(int(pos.y)) + ")!")
 
-# Siklus utama logika AI: deteksi pandangan, tingkat kewaspadaan, dan pergerakan
 func _physics_process(delta: float) -> void:
 	var player := _get_player()
 	_check_player_noise_connection(player)
@@ -264,17 +266,16 @@ func _physics_process(delta: float) -> void:
 
 	is_chasing = (state == State.CHASE)
 	move_and_slide()
+	_check_player_caught(player)
 	_update_alert_ui()
 	_play_animation()
 
-# Mengaktifkan mode pengejaran penuh saat tingkat kewaspadaan mencapai maksimal
 func _enter_chase() -> void:
 	state = State.CHASE
 	is_chasing = true
 	_roam_paused = false
 	_debug_log("[BOSS] >>> ALERT 100%! MULAI NGEJAR! <<<")
 
-# Menggerakkan boss menuju titik koordinat tertentu dengan navigasi
 func _move_towards_pos(target_pos: Vector2, speed: float, delta: float) -> void:
 	nav_agent.target_position = target_pos
 
@@ -293,7 +294,6 @@ func _move_towards_pos(target_pos: Vector2, speed: float, delta: float) -> void:
 
 	_update_stuck_check(delta)
 
-# Memperbarui ikon status (? / ?? / !) di atas kepala boss
 func _update_alert_ui() -> void:
 	if alert_label == null:
 		return
@@ -310,7 +310,6 @@ func _update_alert_ui() -> void:
 		alert_label.text = "?"
 		alert_label.add_theme_color_override("font_color", Color.YELLOW)
 
-# Memeriksa kelengkapan nama animasi boss di SpriteFrames
 func _check_animations() -> void:
 	if anim == null or anim.sprite_frames == null:
 		print("!! AnimatedSprite2D / SpriteFrames gak ketemu!")
@@ -328,11 +327,9 @@ func _check_animations() -> void:
 	else:
 		print("Animasi yang gak ada (", missing.size(), "): ", missing)
 
-# Mengembalikan daftar suffix arah untuk nama animasi
 func _all_suffixes() -> Array:
 	return ["_L", "_R", "_up", "_down", "_up_L", "_up_R", "_down_L", "_down_R"]
 
-# Memainkan animasi boss sesuai kecepatan gerak dan arah hadap
 func _play_animation() -> void:
 	if anim == null or anim.sprite_frames == null:
 		return
@@ -341,7 +338,8 @@ func _play_animation() -> void:
 
 	var prefix := "Idle"
 	if moving:
-		prefix = "Run" if (is_chasing and can_run) else "Walk"
+		var should_run := can_run and (is_chasing or is_roam_running or velocity.length() >= 130.0)
+		prefix = "Run" if should_run else "Walk"
 
 	var suffix := _get_dir_suffix(last_dir)
 	var anim_name := prefix + suffix
@@ -357,7 +355,6 @@ func _play_animation() -> void:
 		if anim.animation != anim_name or not anim.is_playing():
 			anim.play(anim_name)
 
-# Mengonversi vektor arah menjadi suffix teks nama animasi
 func _get_dir_suffix(dir: Vector2) -> String:
 	var y := ""
 	var x := ""
@@ -374,7 +371,6 @@ func _get_dir_suffix(dir: Vector2) -> String:
 		return "_" + y
 	return "_down"
 
-# Mengambil referensi node pemain dari grup player
 func _get_player() -> Node2D:
 	for group in ["player", "players", "Player"]:
 		var nodes := get_tree().get_nodes_in_group(group)
@@ -382,7 +378,6 @@ func _get_player() -> Node2D:
 			return nodes[0] as Node2D
 	return null
 
-# Memeriksa apakah pemain berada di jarak, sudut pandang, dan tanpa halangan dinding
 func _can_see_player(player: Node2D) -> bool:
 	var to_player := player.global_position - global_position
 	var dist := to_player.length()
@@ -414,7 +409,6 @@ func _can_see_player(player: Node2D) -> bool:
 
 	return true
 
-# Mengatur pergerakan patroli acak boss
 func _roam(delta: float) -> void:
 	if _roam_paused:
 		velocity = Vector2.ZERO
@@ -431,7 +425,8 @@ func _roam(delta: float) -> void:
 	if dir == Vector2.ZERO:
 		velocity = Vector2.ZERO
 	else:
-		velocity = dir * roam_speed
+		var speed := roam_run_speed if (is_roam_running and can_run) else roam_speed
+		velocity = dir * speed
 		last_dir = dir
 
 	if _is_obstacle_ahead(dir):
@@ -447,7 +442,6 @@ func _roam(delta: float) -> void:
 
 	_update_stuck_check(delta)
 
-# Mendeteksi apakah ada tabrakan/dinding di depan arah hadap
 func _is_obstacle_ahead(dir: Vector2) -> bool:
 	if obstacle_ray == null or dir == Vector2.ZERO:
 		return false
@@ -460,7 +454,6 @@ func _is_obstacle_ahead(dir: Vector2) -> bool:
 		return false
 	return true
 
-# Memeriksa apakah boss tersangkut di dinding dan mereset tujuan jika macet
 func _update_stuck_check(delta: float) -> void:
 	_stuck_timer += delta
 	if _stuck_timer < STUCK_CHECK_TIME:
@@ -475,13 +468,11 @@ func _update_stuck_check(delta: float) -> void:
 		velocity = Vector2.ZERO
 		_pause_then_roam()
 
-# Mereset penghitung waktu pengecekan tersangkut
 func _reset_stuck_tracker() -> void:
 	_stuck_timer = 0.0
 	_stuck_check_pos = global_position
 	_obstacle_timer = 0.0
 
-# Menghentikan gerakan boss sesaat sebelum mencari titik patroli berikutnya
 func _pause_then_roam() -> void:
 	if _roam_paused:
 		return
@@ -491,8 +482,12 @@ func _pause_then_roam() -> void:
 	if state == State.PATROL:
 		_pick_roam_target()
 
-# Memilih titik tujuan patroli acak pada area navigasi
 func _pick_roam_target() -> void:
+	if can_run and roam_run_chance > 0.0:
+		is_roam_running = (randf() < roam_run_chance)
+	else:
+		is_roam_running = false
+
 	if NavigationServer2D.has_method("map_get_random_point"):
 		var p: Vector2 = NavigationServer2D.map_get_random_point(
 			nav_agent.get_navigation_map(), 1, true)
@@ -507,7 +502,6 @@ func _pick_roam_target() -> void:
 		var offset := Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * 300.0
 		nav_agent.target_position = global_position + offset
 
-# Menggerakkan boss mengejar posisi pemain
 func _chase(player: Node2D) -> void:
 	nav_agent.target_position = player.global_position
 
@@ -521,3 +515,61 @@ func _chase(player: Node2D) -> void:
 	velocity = dir * speed
 	if dir != Vector2.ZERO:
 		last_dir = dir
+
+func _check_player_caught(player: Node2D) -> void:
+	if _is_catching_player:
+		return
+	for i in range(get_slide_collision_count()):
+		var collision := get_slide_collision(i)
+		var collider := collision.get_collider()
+		if collider != null and collider.is_in_group("player"):
+			_catch_player()
+			return
+	if player != null and global_position.distance_to(player.global_position) <= 28.0:
+		_catch_player()
+
+func _catch_player() -> void:
+	if _is_catching_player:
+		return
+	var main_node = get_tree().root.get_node_or_null("Main")
+	if main_node == null and get_tree().current_scene and get_tree().current_scene.has_method("on_player_caught"):
+		main_node = get_tree().current_scene
+	if main_node and "is_transitioning" in main_node and main_node.is_transitioning:
+		return
+	_is_catching_player = true
+	velocity = Vector2.ZERO
+	_debug_log("[BOSS] PEMAIN TERTANGKAP!")
+	if alert_label:
+		alert_label.text = "!"
+		alert_label.add_theme_color_override("font_color", Color.RED)
+	if main_node and main_node.has_method("on_player_caught"):
+		main_node.on_player_caught()
+	else:
+		_standalone_player_caught()
+
+func _standalone_player_caught() -> void:
+	var canvas := CanvasLayer.new()
+	canvas.layer = 100
+	get_tree().root.add_child(canvas)
+
+	var fade := ColorRect.new()
+	fade.set_anchors_preset(Control.PRESET_FULL_RECT)
+	fade.color = Color.BLACK
+	fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	fade.modulate.a = 0.0
+	canvas.add_child(fade)
+
+	var tween_out := create_tween()
+	tween_out.tween_property(fade, "modulate:a", 1.0, 0.4).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	await tween_out.finished
+
+	var dialog_scene = load("res://Scenes/dialog.tscn")
+	if dialog_scene:
+		var dialog = dialog_scene.instantiate()
+		get_tree().root.add_child(dialog)
+		var caught_text := "[color=#ff6b6b]Kamu gagal melarikan diri dan tertangkap oleh Bos![/color]\n\nSelamat menikmati kerja rodi bagai kuda sampai malam! :v"
+		dialog.setup_dialog("SI BOS", "Tertangkap!", caught_text, "boss", "[SPASI / ENTER / E] Coba Lagi (Respawn)")
+		await dialog.dialog_finished
+
+	canvas.queue_free()
+	get_tree().reload_current_scene()

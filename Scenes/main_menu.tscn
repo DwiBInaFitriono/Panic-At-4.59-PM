@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://crwa0e1xlh780"]
 
-[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://bey33dke6l466" path="res://Scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://cg1vimttmd6j8" path="res://Assets/UI/bg.jpeg" id="2_48xlc"]
 
 [node name="Control" type="Control" unique_id=1027752801]
-script = ExtResource("1_menu")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_menu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=601195234]
 layout_mode = 1
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_48xlc")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=70097510]
 
@@ -47,7 +49,7 @@ size_flags_vertical = 4
 bbcode_enabled = true
 text = "[center]
 [font_size=52][b][color=#e74c3c]PANIC AT 4:59 PM[/color][/b][/font_size]
-[font_size=20][i][color=#bdc3c7]\"Overtime is not an option!\"[/color][/i][/font_size]
+[font_size=20][i][color=#bdc3c7]\"Kerja Lembur Bukanlah Suatu Pilihan!\"[/color][/i][/font_size]
 [/center]
 "
 fit_content = true

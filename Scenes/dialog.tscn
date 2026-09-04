@@ -1,4 +1,32 @@
-[gd_scene format=3 uid="uid://u71i37k5xqj8"]
+﻿[gd_scene format=3 uid="uid://u71i37k5xqj8"]
+
+[ext_resource type="Script" path="res://Scripts/dialog.gd" id="1_diag"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.07, 0.08, 0.12, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.32, 0.42, 0.6, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avatar"]
+bg_color = Color(0.04, 0.05, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.32, 0.46, 0.9)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
 
 [node name="Control" type="Control" unique_id=1987431375]
 layout_mode = 3
@@ -7,27 +35,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_diag")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1874509742]
+layer = 120
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=205322567]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimOverlay" type="ColorRect" parent="CanvasLayer/Control" unique_id=987654321]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.45)
 
 [node name="DialoquePanel" type="PanelContainer" parent="CanvasLayer/Control" unique_id=1631488128]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 460.0
-offset_right = 1100.0
-offset_bottom = 640.0
+offset_left = -480.0
+offset_top = -240.0
+offset_right = 480.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/DialoquePanel" unique_id=199336439]
 layout_mode = 2
@@ -38,12 +81,16 @@ theme_override_constants/margin_bottom = 16
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer" unique_id=1658602541]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="PlayerAvatarFrame" type="PanelContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=1814629522]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_avatar")
 
 [node name="AvatarTexture" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/PlayerAvatarFrame" unique_id=1225318551]
+texture_filter = 1
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
@@ -51,41 +98,68 @@ stretch_mode = 5
 [node name="ContentVbox" type="VBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=1467056563]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 6
 
-[node name="NameplateContainer\'" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=977476030]
+[node name="NameplateContainer" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=977476030]
 layout_mode = 2
 
-[node name="SpeakerNameLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer\'" unique_id=1722511133]
+[node name="SpeakerNameLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer" unique_id=1722511133]
+texture_filter = 1
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1, 0.85, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
 
-[node name="SpeakerTitleLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer\'" unique_id=1174871635]
+[node name="SpeakerTitleLabel" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/NameplateContainer" unique_id=1174871635]
+texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.85, 0.95, 0.85)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 15
 
 [node name="DialoqueText" type="RichTextLabel" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=862000760]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.95, 0.96, 0.98, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
 theme_override_constants/line_separation = 4
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
 scroll_active = false
-context_menu_enabled = true
 
 [node name="footerHbox" type="HBoxContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox" unique_id=867273952]
 layout_mode = 2
 
 [node name="controlHint" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/footerHbox" unique_id=1439815462]
+texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.85, 0.9, 0.75)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 13
 
-[node name="ContinueIndikator" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/footerHbox" unique_id=683430501]
-custom_minimum_size = Vector2(24, 24)
+[node name="ContinueIndicator" type="Label" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/ContentVbox/footerHbox" unique_id=683430501]
+texture_filter = 1
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.2, 0.95, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "▼"
 
 [node name="BossavatarFrame" type="PanelContainer" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer" unique_id=273037172]
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_avatar")
 
 [node name="AvatarTexture" type="TextureRect" parent="CanvasLayer/Control/DialoquePanel/MarginContainer/HBoxContainer/BossavatarFrame" unique_id=873595536]
+texture_filter = 1
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
