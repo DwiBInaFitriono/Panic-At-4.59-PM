@@ -36,23 +36,24 @@ layout_mode = 2
 bbcode_enabled = true
 text = "[center]
 [font_size=40][b][color=#e74c3c]PANIC AT 4:59 PM[/color][/b][/font_size]
-[font_size=18][i][color=#bdc3c7]\"Overtime is not an option!\"[/color][/i][/font_size]
+[font_size=18][i][color=#bdc3c7]\"Kerja Lembur Bukanlah Suatu Pilihan!\"[/color][/i][/font_size]
 
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
 [font_size=26][b][color=#f1c40f]DEVELOPMENT TEAM[/color][/b][/font_size]
 
 [font_size=20][b][color=#3498db]Lead Game Developer & Designer[/color][/b][/font_size]
-[font_size=18]Isi Nama Anda / Tim[/font_size]
+[font_size=18]Dwi Bina Fitriono [/font_size]
+[font_size=18]Bagas Bara Bandan Argopuro [/font_size]
 
 [font_size=20][b][color=#3498db]Gameplay Programmer[/color][/b][/font_size]
-[font_size=18]Isi Nama Programmer[/font_size]
+[font_size=18] Samuel Ferdinand Hua Tarang[/font_size]
 
-[font_size=20][b][color=#3498db]Level & Stealth Designer[/color][/b][/font_size]
-[font_size=18]Isi Nama Level Designer[/font_size]
+[font_size=20][b][color=#3498db]Level & Designer[/color][/b][/font_size]
+[font_size=18]Desca Rizki Febriant[/font_size]
 
-[font_size=20][b][color=#3498db]2D / 3D Artist & Animator[/color][/b][/font_size]
-[font_size=18]Isi Nama Artist[/font_size]
+[font_size=20][b][color=#3498db]2D Artist & Animator[/color][/b][/font_size]
+[font_size=18]Bagas Bara Bandan Argopuro[/font_size]
 [/center]
 "
 fit_content = true
@@ -63,18 +64,18 @@ bbcode_enabled = true
 text = "[center]
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
-[font_size=26][b][color=#f1c40f]AUDIO & MUSIC[/color][/b][/font_size]
+[font_size=26][b][color=#f1c40f]AUDIO & MUSIK[/color][/b][/font_size]
 
-[font_size=20][b][color=#3498db]Background Music (BGM)[/color][/b][/font_size]
+[font_size=20][b][color=#3498db]Musik Latar Belakang (BGM)[/color][/b][/font_size]
 [font_size=18]\"Track Title\" by Artist / Composer[/font_size]
 [font_size=14][i][color=#95a5a6](<Licensed under Creative Commons BY 4.0>)[/color][/i][/font_size]
 
-[font_size=20][b][color=#3498db]Sound Effects (SFX)[/color][/b][/font_size]
+[font_size=20][b][color=#3498db]Effect Suara (SFX)[/color][/b][/font_size]
 [font_size=18]Freesound.org Assets / Creator Name[/font_size]
 
 [font_size=14][color=#7f8c8d]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/font_size]
 
-[font_size=26][b][color=#f1c40f]THIRD-PARTY ASSETS & TOOLS[/color][/b][/font_size]
+[font_size=26][b][color=#f1c40f] ASSETS & TOOLS[/color][/b][/font_size]
 
 [font_size=18][b]Game Engine[/b][/font_size]
 [font_size=16]Godot Engine 4.7 (Forward+ / Compatibility)[/font_size]
@@ -82,8 +83,12 @@ text = "[center]
 [font_size=18][b]Physics Engine[/b][/font_size]
 [font_size=16]Jolt Physics[/font_size]
 
-[font_size=18][b]Graphics & Font Assets[/b][/font_size]
-[font_size=16]Font Name by Creator Name[/font_size]
+[font_size=18][b]Grafik &  Assets[/b][/font_size]
+[font_size=16]Pixel Interior (Living Room & Kitchen) by Bitglow[/font_size]
+[font_size=16]Professional Kitchen Set by 0-mem0ry[/font_size]
+[font_size=16]Character Templates Pack by erisesra[/font_size]
+[font_size=16]Pixel Life: Office Essentials by christianperich[/font_size]
+[font_size=16]Furniture Office Set by stcrbcn[/font_size]
 [/center]
 "
 fit_content = true
@@ -97,13 +102,10 @@ text = "[center]
 [font_size=26][b][color=#f1c40f]SPECIAL THANKS[/color][/b][/font_size]
 
 [font_size=18]Godot Engine Community[/font_size]
-[font_size=18]Our Playtesters & Friends[/font_size]
-[font_size=18]And YOU for Playing![/font_size]
+[font_size=18]Beta Tester kami & Teman Kami[/font_size]
+[font_size=18]Dan Terimakasih Telah Bermain;D[/font_size]
 
-[font_size=20]☕[/font_size]
-[font_size=14][i][color=#bdc3c7]Escaped the office right on time![/color][/i][/font_size]
 
-[font_size=12][color=#7f8c8d]© 2026 All Rights Reserved.[/color][/font_size]
 [/center]
 "
 fit_content = true
