@@ -8752,7 +8752,7 @@ tile_map_data = PackedByteArray("AABLABwAAQAZABIAAABLAB0AAQAZABMAAABLAB4AAQAZABQ
 tile_set = SubResource("TileSet_d5sov")
 
 [node name="Exit" type="Area2D" parent="." unique_id=572251873]
-position = Vector2(172, 79)
+position = Vector2(171, 84.00001)
 scale = Vector2(1.65, 1.65)
 metadata/_edit_group_ = true
 
@@ -8761,7 +8761,7 @@ position = Vector2(-2.2888184e-05, -2.121212)
 shape = SubResource("RectangleShape2D_t0djc")
 
 [node name="Players" parent="." unique_id=1392093561 instance=ExtResource("7_5e8ce")]
-position = Vector2(217, 247.99998)
+position = Vector2(736.99994, 482)
 
 [node name="Bosses" parent="." unique_id=332418057 instance=ExtResource("7_0500n")]
 position = Vector2(1100.9999, 267.99997)

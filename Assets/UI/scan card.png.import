@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwqbi64cqpm8y"
-path="res://.godot/imported/nyoba.png-69a729be72474fa0e3a9708822bbe6b9.ctex"
+path="res://.godot/imported/scan card.png-5fc95962174891fe39a2d1e564a43d5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/nyoba.png"
-dest_files=["res://.godot/imported/nyoba.png-69a729be72474fa0e3a9708822bbe6b9.ctex"]
+source_file="res://Assets/UI/scan card.png"
+dest_files=["res://.godot/imported/scan card.png-5fc95962174891fe39a2d1e564a43d5b.ctex"]
 
 [params]
 
