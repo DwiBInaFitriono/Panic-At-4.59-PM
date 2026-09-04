@@ -2,21 +2,24 @@ extends CharacterBody2D
 
 enum State { PATROL, SUSPICIOUS, INVESTIGATING, CHASE }
 
-const CHASE_SPEED = 205.0
-const ROAM_SPEED = 80.0
-const SUSPICIOUS_SPEED = 110.0
+# Parameter Kesulitan Dinamis (Diatur otomatis berdasarkan Level 1, 2, atau 3)
+@export var can_run: bool = true
+@export var chase_speed: float = 205.0
+@export var chase_speed_walk_only: float = 105.0
+@export var roam_speed: float = 80.0
+@export var suspicious_speed: float = 110.0
 
-@export var VISION_RANGE: float = 220.0
-@export var CONE_ANGLE: float = 45.0 # Sudut ke kiri & kanan dari arah hadap (total kerucut 90°)
-@export var ALERT_BUILDUP_SPEED: float = 1.5 # Kecepatan alert terisi (detik ke 100%)
-@export var ALERT_DECAY_SPEED: float = 0.5   # Kecepatan alert berkurang saat aman
-@export var can_run: bool = true # Jika false, Boss hanya jalan (tidak lari)
-@export var CHASE_SPEED_WALK_ONLY: float = 115.0 # Kecepatan chase jika Boss hanya walk
+@export var vision_range: float = 220.0
+@export var cone_angle: float = 45.0 # Sudut ke kiri & kanan dari arah hadap (total kerucut = cone_angle * 2)
+@export var alert_buildup_speed: float = 1.5 # Kecepatan alert terisi (detik ke 100%)
+@export var alert_decay_speed: float = 0.5   # Kecepatan alert berkurang saat aman
+@export var hearing_range: float = 280.0     # Jarak pendengaran langkah lari pemain
 
-const LOSE_SIGHT_RANGE = 420.0
-const LOSE_SIGHT_TIME = 1.5
-const ROAM_PAUSE_MIN = 1.0
-const ROAM_PAUSE_MAX = 3.0
+@export var lose_sight_range: float = 420.0
+@export var lose_sight_time: float = 1.5
+@export var roam_pause_min: float = 1.0
+@export var roam_pause_max: float = 3.0
+
 const STUCK_CHECK_TIME = 1.0
 const STUCK_DISTANCE = 6.0
 const OBSTACLE_LOOKAHEAD = 26.0
@@ -59,9 +62,8 @@ func _ready() -> void:
 	_check_animations()
 	_setup_alert_label()
 
-	# Auto-detect: Jika berada di Level 1, Boss hanya bisa jalan (walk-only)
-	if owner != null and owner.scene_file_path.contains("levels_1.tscn"):
-		can_run = false
+	# Terapkan tingkat kesulitan berdasarkan level saat ini
+	_apply_difficulty_by_level()
 
 	nav_agent.path_desired_distance = 8.0
 	nav_agent.target_desired_distance = 16.0
@@ -76,6 +78,89 @@ func _ready() -> void:
 	_debug_log("[BOSS] Region navigasi terdeteksi: %d (harusnya minimal 1)" % regions.size())
 
 	_pick_roam_target()
+
+func _get_current_level_number() -> int:
+	var main_node = get_tree().root.get_node_or_null("Main")
+	if main_node and "level" in main_node:
+		return main_node.level
+
+	var scene_path := ""
+	if owner and owner.scene_file_path != "":
+		scene_path = owner.scene_file_path
+	elif get_tree().current_scene:
+		scene_path = get_tree().current_scene.scene_file_path
+
+	if "levels_1" in scene_path:
+		return 1
+	elif "levels_2" in scene_path:
+		return 2
+	elif "levels_3" in scene_path:
+		return 3
+
+	return 1
+
+func _apply_difficulty_by_level() -> void:
+	var lvl := _get_current_level_number()
+	_debug_log("[BOSS] Menyetel statistik Boss untuk Level %d" % lvl)
+
+	match lvl:
+		1:
+			# LEVEL 1: Mudah / Pengenalan
+			# - Boss HANYA BISA JALAN (tidak bisa lari)
+			# - Jarak pandang pendek (175px) & sudut pandang sempit (35 derajat)
+			# - Alert naik lambat & cepat lupa saat pemain sembunyi
+			can_run = false
+			chase_speed_walk_only = 100.0
+			roam_speed = 70.0
+			suspicious_speed = 90.0
+			vision_range = 175.0
+			cone_angle = 35.0
+			alert_buildup_speed = 1.0
+			alert_decay_speed = 0.8
+			lose_sight_time = 1.2
+			lose_sight_range = 340.0
+			hearing_range = 200.0
+			roam_pause_min = 1.5
+			roam_pause_max = 3.5
+
+		2:
+			# LEVEL 2: Menengah / Tantangan Nyata
+			# - Boss BISA LARI saat mengejar (195px/s > lari pemain 180px/s)
+			# - Jarak pandang normal (240px) & kerucut pandang standar (45 derajat)
+			# - Lebih peka terhadap suara lari (hearing range 300px)
+			can_run = true
+			chase_speed = 195.0
+			roam_speed = 85.0
+			suspicious_speed = 115.0
+			vision_range = 240.0
+			cone_angle = 45.0
+			alert_buildup_speed = 1.8
+			alert_decay_speed = 0.5
+			lose_sight_time = 2.0
+			lose_sight_range = 420.0
+			hearing_range = 300.0
+			roam_pause_min = 1.0
+			roam_pause_max = 2.5
+
+		3, _:
+			# LEVEL 3: Sulit / Panic Maksimal
+			# - Boss LARI SANGAT CEPAT (220px/s)
+			# - Jarak pandang jauh (300px) & sudut pandang lebar (55 derajat)
+			# - Alert naik sangat cepat & lama curiga (sulit melarikan diri)
+			# - Jarang berhenti istirahat (selalu aktif berpatroli)
+			can_run = true
+			chase_speed = 220.0
+			roam_speed = 95.0
+			suspicious_speed = 135.0
+			vision_range = 300.0
+			cone_angle = 55.0
+			alert_buildup_speed = 2.6
+			alert_decay_speed = 0.3
+			lose_sight_time = 2.8
+			lose_sight_range = 500.0
+			hearing_range = 380.0
+			roam_pause_min = 0.5
+			roam_pause_max = 1.5
 
 func _setup_alert_label() -> void:
 	alert_label = get_node_or_null("AlertLabel") as Label
@@ -99,7 +184,8 @@ func _check_player_noise_connection(player: Node2D) -> void:
 func _on_player_noise(pos: Vector2, loudness: float) -> void:
 	if state == State.PATROL or state == State.SUSPICIOUS:
 		var dist := global_position.distance_to(pos)
-		if dist <= loudness:
+		var effective_range := maxf(loudness, hearing_range)
+		if dist <= effective_range:
 			_investigate_pos = pos
 			alert_level = maxf(alert_level, 0.4)
 			state = State.SUSPICIOUS
@@ -114,15 +200,15 @@ func _physics_process(delta: float) -> void:
 	# 1. Update Alert Level berdasarkan pandangan
 	if can_see and player != null:
 		var dist := global_position.distance_to(player.global_position)
-		var distance_factor := clampf(1.0 - (dist / VISION_RANGE), 0.25, 1.0)
+		var distance_factor := clampf(1.0 - (dist / vision_range), 0.25, 1.0)
 		var sprint_bonus := 1.8 if Input.is_action_pressed("sprint") else 1.0
-		alert_level = minf(1.0, alert_level + delta * ALERT_BUILDUP_SPEED * distance_factor * sprint_bonus)
-		_lose_sight_timer = LOSE_SIGHT_TIME
+		alert_level = minf(1.0, alert_level + delta * alert_buildup_speed * distance_factor * sprint_bonus)
+		_lose_sight_timer = lose_sight_time
 		_investigate_pos = player.global_position
 	else:
 		_lose_sight_timer = maxf(0.0, _lose_sight_timer - delta)
 		if state != State.CHASE or _lose_sight_timer <= 0.0:
-			alert_level = maxf(0.0, alert_level - delta * ALERT_DECAY_SPEED)
+			alert_level = maxf(0.0, alert_level - delta * alert_decay_speed)
 
 	# 2. State Machine Logic
 	match state:
@@ -143,7 +229,7 @@ func _physics_process(delta: float) -> void:
 				_debug_log("[BOSS] Kembali tenang (Patrol).")
 				_pick_roam_target()
 			else:
-				_move_towards_pos(_investigate_pos, SUSPICIOUS_SPEED, delta)
+				_move_towards_pos(_investigate_pos, suspicious_speed, delta)
 
 		State.INVESTIGATING:
 			_investigate_timer -= delta
@@ -283,14 +369,14 @@ func _can_see_player(player: Node2D) -> bool:
 	var dist := to_player.length()
 
 	if is_chasing:
-		if dist > LOSE_SIGHT_RANGE:
+		if dist > lose_sight_range:
 			return false
 	else:
-		if dist > VISION_RANGE:
+		if dist > vision_range:
 			_debug_log("[BOSS] player terlalu jauh: " + str(int(dist)))
 			return false
 		var angle_deg := absf(rad_to_deg(last_dir.angle_to(to_player)))
-		if angle_deg > CONE_ANGLE:
+		if angle_deg > cone_angle:
 			_debug_log("[BOSS] di luar kerucut pandang: sudut " + str(int(angle_deg)))
 			return false
 
@@ -325,7 +411,7 @@ func _roam(delta: float) -> void:
 	if dir == Vector2.ZERO:
 		velocity = Vector2.ZERO
 	else:
-		velocity = dir * ROAM_SPEED
+		velocity = dir * roam_speed
 		last_dir = dir
 
 	if _is_obstacle_ahead(dir):
@@ -376,7 +462,7 @@ func _pause_then_roam() -> void:
 	if _roam_paused:
 		return
 	_roam_paused = true
-	await get_tree().create_timer(randf_range(ROAM_PAUSE_MIN, ROAM_PAUSE_MAX)).timeout
+	await get_tree().create_timer(randf_range(roam_pause_min, roam_pause_max)).timeout
 	_roam_paused = false
 	if state == State.PATROL:
 		_pick_roam_target()
@@ -405,7 +491,7 @@ func _chase(player: Node2D) -> void:
 
 	var next_pos := nav_agent.get_next_path_position()
 	var dir := (next_pos - global_position).normalized()
-	var speed := CHASE_SPEED if can_run else CHASE_SPEED_WALK_ONLY
+	var speed := chase_speed if can_run else chase_speed_walk_only
 	velocity = dir * speed
 	if dir != Vector2.ZERO:
 		last_dir = dir

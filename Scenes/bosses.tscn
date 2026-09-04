@@ -916,7 +916,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehsdj"]
-size = Vector2(16.000008, 18.000008)
+size = Vector2(16.000008, 14.000007)
 
 [node name="Bosses" type="CharacterBody2D" unique_id=332418057]
 script = ExtResource("1_fwb5f")
@@ -926,7 +926,7 @@ sprite_frames = SubResource("SpriteFrames_1p2kt")
 animation = &"Idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=100786208]
-position = Vector2(-2.3841858e-07, 7)
+position = Vector2(-2.3841858e-07, 9)
 scale = Vector2(0.9999995, 0.9999995)
 shape = SubResource("RectangleShape2D_ehsdj")
 
