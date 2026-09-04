@@ -29,8 +29,8 @@ func _show_ending_dialog() -> void:
 
 	var dialog = DIALOG_SCENE.instantiate()
 	add_child(dialog)
-	var text := "Dengan ketepatan dan verifikasi ID Card yang sempurna, kamu berhasil meloloskan diri dari kejaran Bos secara sah!\n\nTiba di rumah tepat waktu, kamu bisa duduk santai dan menikmati pertandingan Piala Dunia dengan tenang! :D"
-	dialog.setup_dialog("ENDING 1", "Rute Normal / Lobby", text, "player", "[SPASI / ENTER / E] Lanjut ke Credits")
+	var text := "Kamu lolos dari pintu utama setelah memindai ID Card.\n\nKamu tiba di rumah tepat waktu dan bisa menonton pertandingan Piala Dunia malam ini."
+	dialog.setup_dialog("ENDING 1", "Rute Normal / Lobby", text, "player", "[SPASI] Lanjut ke Credits")
 	await dialog.dialog_finished
 
 	var tween_out := create_tween()

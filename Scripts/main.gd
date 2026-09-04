@@ -414,7 +414,7 @@ func on_player_caught() -> void:
 
 	var dialog = DIALOG_SCENE.instantiate()
 	add_child(dialog)
-	var caught_text := "[color=#ff6b6b]Kamu gagal melarikan diri dan tertangkap oleh Bos![/color]\n\nSelamat menikmati kerja rodi bagai kuda sampai malam! :v"
+	var caught_text := "[color=#ff6b6b]Bos menangkapmu.[/color]\n\nKamu harus lembur malam ini."
 	dialog.setup_dialog("SI BOS", "Tertangkap!", caught_text, "boss", "[SPASI / ENTER / E] Coba Lagi (Respawn)")
 	await dialog.dialog_finished
 
@@ -442,7 +442,7 @@ func _show_intro_dialog() -> void:
 		current_level_root.process_mode = Node.PROCESS_MODE_DISABLED
 	var dialog = DIALOG_SCENE.instantiate()
 	add_child(dialog)
-	var intro_text := "Jam kerja akhirnya sudah selesai! Hari ini adalah hari yang paling ditunggu-tunggu karena ada pertandingan Piala Dunia.\n\nNamun, si Bos yang hobi memberi lemburan mendadak mulai mengintai di sudut kantor. Bisakah kamu keluar dari kantor ini tanpa tertangkap olehnya?"
+	var intro_text := "Jam kerja sudah selesai dan pertandingan Piala Dunia segera mulai.\n\nBos sedang berpatroli mencari karyawan untuk lembur. Keluar dari kantor tanpa terlihat olehnya."
 	dialog.setup_dialog("PENGANTAR", "Pukul 16:59", intro_text, "player", "[SPASI / ENTER / E] Mulai Permainan")
 	await dialog.dialog_finished
 

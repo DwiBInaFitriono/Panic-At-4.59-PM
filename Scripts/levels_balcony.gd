@@ -29,7 +29,7 @@ func _show_balcony_ending_dialog() -> void:
 
 	var dialog = DIALOG_SCENE.instantiate()
 	add_child(dialog)
-	var text := "Demi nonton Piala Dunia, kamu nekat kabur melompati balkon tanpa verifikasi ID Card!\n\nNonton bola malam ini memang sukses besar, tapi sayangnya... keesokan harinya kamu langsung disambut Surat Peringatan (SP) dari Bos karena dianggap bolos kerja! D:"
+	var text := "Kamu melompat dari balkon untuk menghindari bos.\n\nKamu berhasil menonton Piala Dunia malam ini. Besok paginya, bos memberimu Surat Peringatan (SP) karena kabur saat jam kerja."
 	dialog.setup_dialog("ENDING 2", "Rute Alternatif / Balkon", text, "player", "[SPASI / ENTER / E] Lanjut ke Credits")
 	await dialog.dialog_finished
 

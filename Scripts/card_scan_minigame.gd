@@ -100,7 +100,7 @@ func _start_scan() -> void:
 	laser_line.visible = false
 	is_completed = true
 
-	status_label.text = "> AKSES DITERIMA // PINTU TERBUKA"
+	status_label.text = "> AKSES DITERIMA PINTU TERBUKA"
 	status_label.add_theme_color_override("font_color", Color(0.20, 0.95, 0.50, 1.0))
 
 	await get_tree().create_timer(0.6).timeout
@@ -114,7 +114,7 @@ func _start_scan() -> void:
 	queue_free()
 
 func _reset_card_position() -> void:
-	status_label.text = "> POSISI TIDAK TEPAT // COBA LAGI"
+	status_label.text = "> POSISI TIDAK TEPAT COBA LAGI"
 	status_label.add_theme_color_override("font_color", Color(0.95, 0.35, 0.35, 1.0))
 
 	var return_tween := create_tween()
